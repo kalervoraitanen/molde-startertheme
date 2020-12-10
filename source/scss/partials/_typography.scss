@@ -1,0 +1,63 @@
+/******************************************************************
+Site Name: Molde theme
+Author: Kalervo Raitanen
+
+Stylesheet: Typography Stylesheet
+******************************************************************/
+
+
+/******************************************
+TYPOGRAPHICAL DEFAULTS
+******************************************/
+
+body {
+  /* Enable OpenType features to enhance the legibility and appearance of text */
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+
+/*
+  -webkit-font-smoothing: antialiased; // Smooth the font
+  -moz-osx-font-smoothing: grayscale;  // Makes light text on dark backgrounds look lighter on Firefox
+*/
+
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Emphasize legibility to produce the most legible text */
+  text-rendering: optimizelegibility;
+
+  /* Break long words to prevent overflowing */
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+/******************************************
+EMBEDDING LOCAL FONTS
+******************************************/
+
+/* 
+To embed local fonts uncomment the below section and use this syntax.
+Remember to check the path for the font files.
+*/
+
+/*  
+@font-face {
+    font-family: 'Font Name';
+    src: url('font-name.eot');
+    src: url('font-name.eot?#iefix') format('embedded-opentype'),
+           url('font-name.woff') format('woff'),
+           url('font-name.ttf') format('truetype'),
+           url('font-name.svg#font-name') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/

@@ -1,0 +1,27 @@
+/*
+Theme Name: Molde starter theme
+Theme URI: 
+Author: Kalervo Raitanen
+Author URI: http://www.kalervoraitanen.com/
+Description: Molde starter theme.
+Version: 1.0
+Tags: accessibility-ready, translation-ready, microdata
+Text Domain: molde-theme
+Domain Path: /languages
+
+
+Read this to get started for the first time
+------------------------------------------------------------------
+
+Molde uses Sass by default. If you prefer using regular CSS,
+then feel free to modify this theme how you like.
+
+Use compiler tools like Grunt to compile Sass into valid minified CSS.
+The Sass file to compile is found in source/scss/style.scss
+and set the output to assets/css/style.min.css
+
+Javascript file is found in source/js/scripts.js and you should
+minify it to assets/js/scripts.min.js
+You can change the used filenames and folders in functions.php file.
+
+---------------------------------------------------------------

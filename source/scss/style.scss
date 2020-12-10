@@ -1,0 +1,45 @@
+/******************************************************************
+Site Name: Molde theme
+Author: Kalervo Raitanen
+
+Stylesheet: Main Stylesheet
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+*********************/
+
+@import "partials/normalize";
+@import "partials/variables";
+@import "partials/typography";
+//@import "partials/normalize-opentype"; // Use OpenType font features like ligatures, kerning, and more.
+
+
+/*********************
+IMPORTING MODULES
+*********************/
+
+// Buttons
+@import "modules/buttons";
+
+
+/*********************
+BASE STYLES
+These are the base / mobile styles. They set the foundation for the website.
+The idea is to progressively enchance the design with media queries.
+*********************/
+
+// Styles in base.scss
+@import "breakpoints/base";
+
+
+/*********************
+STYLES FOR LARGER SCREEN SIZES
+Considering that nowadays there are so many different screen sizes so instead
+of trying to cover them all use design based media queries.
+*********************/
+
+// Styles for 768px and larger screen sizes
+@media only screen and (min-width: 768px) {
+	@import "breakpoints/768up";
+}

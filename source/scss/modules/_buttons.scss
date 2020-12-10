@@ -1,0 +1,50 @@
+/******************************************************************
+Site Name: Molde theme
+Author: Kalervo Raitanen
+
+Stylesheet: Buttons Stylesheet
+******************************************************************/
+
+
+/*********************
+BUTTON DEFAULTS
+*********************/
+
+/* Example button defaults */
+%btn {
+	border: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	outline: 0;
+	padding: 0.5em;
+	position: relative;
+	text-decoration: none;
+
+	/* Focusing the button with a keyboard will show a blue solid line. */
+	&:focus-visible {
+  	outline: 2px solid blue;
+	}
+  
+	/* Focusing the button with a mouse, touch, or stylus won't show outline. */
+	&:focus:not(:focus-visible) {
+  	outline: none;
+	}
+}
+
+
+/*********************
+DIFFERENT BUTTONS
+*********************/
+
+button {
+	@extend %btn;
+}
+
+.read-more {
+	@extend %btn;
+
+  &:active {
+  	top: -1px; // Add a tiny hop to the click
+	}
+}

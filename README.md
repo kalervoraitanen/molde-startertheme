@@ -9,6 +9,8 @@ With a Mobile-First approach Molde serves up only the minimum to small devices a
 
 Molde is translation ready and comes with Finnish translation out of the box.
 
+And what's best it is totally free. You can do what every you want with it, even money!
+
 Designed by Kalervo Raitanen
 http://www.kalervoraitanen.com
 

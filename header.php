@@ -47,13 +47,14 @@ The header for Molde theme
 
 			<p class="site-description" itemprop="alternativeHeadline"><?php bloginfo('description'); ?></p>
 
-			<button class="nav-button" aria-expanded="false" aria-haspopup="true">Menu</button>
+			<button class="nav-button" aria-controls="primary-menu-list" aria-expanded="false" aria-haspopup="true">Menu</button>
 
 			<?php /* Show main navigation */ ?>
-			<nav class="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<nav class="main-nav" role="navigation" aria-label="<?php _e( 'Primary menu', 'molde-theme' ); ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
 				<?php wp_nav_menu(array(
 					         'container' => false,                           // Remove nav container
 					         'container_class' => '',              				   // Class of container (should you choose to use it)
+					         'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>', // Markup to wrap menuitems
 					         'menu' => __( 'The Main Menu', 'molde-theme' ), // Nav name
 					         'menu_class' => '',            							   // Adding custom nav class
 					         'theme_location' => 'main-nav',                 // Where it's located in the theme

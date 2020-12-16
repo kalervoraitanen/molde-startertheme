@@ -47,6 +47,8 @@ The header for Molde theme
 
 			<p class="site-description" itemprop="alternativeHeadline"><?php bloginfo('description'); ?></p>
 
+			<button class="nav-button" aria-expanded="false" aria-haspopup="true">Menu</button>
+
 			<?php /* Show main navigation */ ?>
 			<nav class="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 				<?php wp_nav_menu(array(

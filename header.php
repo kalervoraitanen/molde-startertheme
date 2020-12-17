@@ -33,9 +33,10 @@ The header for Molde theme
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-		<a class="skip-link screen-reader-text" href="#main" tabindex="-1"><?php _e( 'Skip to main content', 'molde-theme' ); ?></a>
-
 		<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			
+			<?php /* Use the "Skip to main content" link as first element on the page */ ?>
+			<a class="skip-link screen-reader-text" href="#main" tabindex="-1"><?php _e( 'Skip to main content', 'molde-theme' ); ?></a>
 
 			<?php /* If we're on the front page show site title as h1 */ ?>
 			<?php if ( is_front_page() ) : ?>

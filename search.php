@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" tabindex=-1>
 	
 	<?php /* If posts found show search word title */ ?>
 	<?php if ( have_posts() ) : ?>

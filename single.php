@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" tabindex=-1>
 
 	<?php /* Loop through post data */ ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

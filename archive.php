@@ -6,7 +6,7 @@ The archive page for Molde theme
 
 <?php get_header(); ?>
 
-<main id="main" class="site-main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<main id="main" class="site-main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" tabindex=-1>
 
 	<?php /* If archive is category show category title */ ?>
 	<?php if (is_category()) { ?>

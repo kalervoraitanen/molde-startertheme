@@ -87,7 +87,7 @@ add_filter( 'the_content', 'filter_ptags_on_images' );
 
 // Modify the default excerpt Read More link
 function molde_excerpt_more( $more ) {
-    return '...<p><a class="read-more" href="'.get_the_permalink().'" rel="nofollow" itemprop="url">' . __( 'Continue reading', 'molde-theme' ) . '</a></p>';
+    return '...<p><a class="read-more" href="'.get_the_permalink().'" rel="nofollow" itemprop="url">' . __( 'Continue reading', 'molde-theme' ) . ' <span class="screen-reader-text">' . get_the_title() . '</span></a></p>';
 }
 add_filter( 'excerpt_more', 'molde_excerpt_more' );
 

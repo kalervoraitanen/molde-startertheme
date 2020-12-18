@@ -7,7 +7,7 @@ It is meant to be used as a starter theme which you can use to develop your own 
 
 With a Mobile-First approach Molde serves up only the minimum to small devices and progressively enhances for larger viewports.
 
-Molde is translation ready and accesibility ready. It scores 100 in Accesibility in Google's Lighthouse audit.
+Molde is translation ready and accessibility ready. It scores 100 in Accessibility in Google's Lighthouse audit.
 
 And what's best it is totally free. You can do what every you want with it, even money!
 

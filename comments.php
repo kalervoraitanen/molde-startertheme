@@ -15,7 +15,7 @@ if ( post_password_required() ) {
 // A better and more semantic comment layout
  ?>
   <section id="commentlist">
-     <h3 class="comments-title"><?php comments_number( __( '<span>No</span> Comments', 'molde-theme' ), __( '<span itemprop="commentCount">1</span> Comment', 'molde-theme' ), __( '<span itemprop="commentCount">%</span> Comments', 'molde-theme' ) );?></h3>
+     <p class="comments-title"><?php comments_number( __( '<span>No</span> Comments', 'molde-theme' ), __( '<span itemprop="commentCount">1</span> Comment', 'molde-theme' ), __( '<span itemprop="commentCount">%</span> Comments', 'molde-theme' ) );?></p>
 
     <?php
       wp_list_comments( array(
@@ -66,6 +66,9 @@ $comments_args = array(
     'title_reply' => __( 'Leave a Comment', 'molde-theme'),
     // Change the title of the reply section
     'title_reply_to' => __( 'Reply', 'molde-theme'),
+        // Change the default h3 reply text to paragraph
+    'title_reply_before' => '<p id="reply-title" class="comment-reply-title">',
+    'title_reply_after' => '</p>',
     // Cancel Reply Text
     'cancel_reply_link' => '<span class="cancel-reply">' . __( 'Cancel Reply', 'molde-theme') . '</span>',
     // Change the 'Your email will not be published' text

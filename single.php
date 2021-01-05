@@ -48,11 +48,6 @@
 
     <?php
     
-    /* If comments are open show comments and comment form */
-    if ( comments_open() || get_comments_number() ) :
-    	
-    	comments_template();
-		
 		endif;
 		
 		?>

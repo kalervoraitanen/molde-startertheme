@@ -46,12 +46,6 @@
 
     </footer>
 
-    <?php
-    
-		endif;
-		
-		?>
-
   </article>
   
 	  <?php

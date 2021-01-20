@@ -31,25 +31,9 @@
 
 		<article class="post-not-found">
 
-			<header class="article-header">
-			
-				<h1><?php _e( 'Post not found!', 'molde-theme' ); ?></h1>
-			
-			</header>
+			<?php molde_posts_not_found(); ?>
 
-			<section class="entry-content">
-			
-				<p><?php _e( 'Something is missing. Try double checking things.', 'molde-theme' ); ?></p>
-			
-			</section>
-			
-			<footer class="article-footer">
-			
-				<p><?php _e( 'This is the error message in the page.php template.', 'molde-theme' ); ?></p>
-			
-			</footer>
-
-	</article>
+		</article>
 
 	<?php endif; ?>
 

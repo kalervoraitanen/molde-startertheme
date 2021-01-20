@@ -17,20 +17,6 @@
 	        ); ?>
 				</p>
 
-				<p class="entry-meta">
-
-					<?php /* Show post categories */ ?>
-	      	<?php printf( __( 'Categories', 'molde-theme' ).': %1$s', get_the_category_list(', ') ); ?>
-
-				</p>
-
-				<p class="entry-meta">
-
-					<?php /* Show post tags */ ?>
-	      	<span itemprop="keywords"><?php the_tags( __( 'Tags: ', 'molde-theme' ) ); ?></span>
-
-	    	</p>
-
 			</header>
 
 			<section class="entry-content">
@@ -44,6 +30,12 @@
 				<span itemprop="articleBody" class="post-excerpt"><?php the_excerpt(); ?></span>
 
 			</section>
+
+			<footer class="entry-footer">
+
+				<?php molde_categories_tags(); ?>
+
+			</footer>
 		
 		</article>
 
@@ -52,23 +44,7 @@
 
 		<article class="post-not-found">
 
-			<header class="article-header">
-			
-				<h2><?php _e( 'Post not found!', 'molde-theme' ); ?></h2>
-			
-			</header>
-
-			<section class="entry-content">
-			
-				<p><?php _e( 'Something is missing. Try double checking things.', 'molde-theme' ); ?></p>
-			
-			</section>
-			
-			<footer class="article-footer">
-			
-				<p><?php _e( 'This is the error message in the index.php template.', 'molde-theme' ); ?></p>
-			
-			</footer>
+			<?php molde_posts_not_found(); ?>
 
 		</article>
 

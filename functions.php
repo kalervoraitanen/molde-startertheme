@@ -152,4 +152,9 @@ function molde_scripts_and_styles() {
   }
 }
 
+/**
+ * Custom template tags for this theme.
+ */
+require get_parent_theme_file_path( '/inc/template-tags.php' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

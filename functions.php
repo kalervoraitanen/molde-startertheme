@@ -75,6 +75,9 @@ function molde_setup() {
     )
   );
 
+  // Add support for Block Styles.
+  add_theme_support( 'wp-block-styles' );  
+
   add_action( 'widgets_init', 'molde_register_sidebars' );
 
   // Enqueue base scripts and styles

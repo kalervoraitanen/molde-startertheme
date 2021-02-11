@@ -87,7 +87,7 @@ add_action( 'after_setup_theme', 'molde_setup' );
 
 
 /* Register one sidebar by default */
-function harmony_register_sidebars() {
+function molde_register_sidebars() {
   register_sidebar(
     array(
       'name'          => esc_html__( 'Sidebar', 'molde-theme' ),

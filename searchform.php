@@ -4,6 +4,6 @@
   
   <input type="search" id="s" name="s" itemprop="query" placeholder="<?php _e('Search for...','molde-theme'); ?>" value="" />
 
-  <button type="submit" id="searchsubmit" ><span class="screen-reader-text"><?php _e('Search','molde-theme'); ?></span><span class="search-glass">&#9906;</span></button>
+  <button type="submit" class="searchsubmit" ><span class="screen-reader-text"><?php _e('Search','molde-theme'); ?></span><span class="search-glass">&#9906;</span></button>
 
 </form>

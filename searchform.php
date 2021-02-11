@@ -1,4 +1,4 @@
-<form role="search" method="get" id="searchform" class="searchform" itemscope itemtype="https://schema.org/SearchAction" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" class="searchform" itemscope itemtype="https://schema.org/SearchAction" action="<?php echo esc_url( home_url( '/' ) ); ?>">
   
   <label for="s" class="screen-reader-text"><?php _e('Search for:','molde-theme'); ?></label>
   

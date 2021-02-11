@@ -107,15 +107,6 @@ function molde_content_width() {
 }
 add_action( 'after_setup_theme', 'molde_content_width', 0 );
 
-// Remove some options like background image from Theme Customizer. You can remove these if you choose to use them.
-function molde_theme_customizer($wp_customize) {
-  $wp_customize->remove_section('colors');
-  $wp_customize->remove_section('background_image');
-  $wp_customize->remove_section('static_front_page');
-  $wp_customize->remove_section('nav');
-  $wp_customize->remove_control('blogdescription');
-}
-add_action( 'customize_register', 'molde_theme_customizer' );
 
 // To embed Google Fonts uncomment the below lines.
 /* function molde_fonts() {

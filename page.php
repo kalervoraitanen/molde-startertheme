@@ -22,6 +22,8 @@
 
     </section>
 
+    <?php wp_link_pages(); ?>
+
   </article>
 
 	<?php /* If no posts found show error messages */ ?>

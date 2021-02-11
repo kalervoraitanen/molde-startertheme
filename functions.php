@@ -51,6 +51,21 @@ function molde_setup() {
       'admin-head-callback' => '',
       'admin-preview-callback' => ''
       )
+  );
+
+  // Add post format support
+  add_theme_support( 'post-formats',
+    array(
+      'aside',             // Title less blurb
+      'gallery',           // Gallery of images
+      'link',              // Quick link to other site
+      'image',             // An image
+      'quote',             // A quick quote
+      'status',            // A Facebook like status update
+      'video',             // Video
+      'audio',             // Audio
+      'chat'               // Chat transcript
+    )
   );  
 
   /* Register one menu by default */

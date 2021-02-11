@@ -122,17 +122,6 @@ WORDPRESS DEFAULT STYLES
 	margin: 0 0 1em 0;
 }
 
-.wp-block-cover {
-	color: $white;
-}
-
-.wp-block-cover-text {
-	text-shadow: -1px -1px 1px #000,
-								1px -1px 1px #000,
-							 -1px 1px 1px #000,
-								1px 1px 1px #000;
-}
-
 .wp-block-gallery {
 	margin: 0 0 2em 0;
 }
@@ -152,5 +141,5 @@ WORDPRESS DEFAULT STYLES
 }
 
 .bypostauthor {
-	border: 1px solid $light-gray;
+	border: 1px solid #ccc;
 }

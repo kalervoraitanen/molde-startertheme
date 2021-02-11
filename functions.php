@@ -31,6 +31,17 @@ function molde_setup() {
       'navigation-widgets',
     )
   );
+
+  // Add theme support for Custom Logo.
+  add_theme_support(
+    'custom-logo',
+    array(
+      'width'      => 500,
+      'height'     => 250,
+      'flex-width' => true,
+    )
+  );
+    
   /* Register one menu by default */
   register_nav_menus(
     array(

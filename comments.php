@@ -78,7 +78,7 @@ $comments_args = array(
     // Remove "Text or HTML to be displayed after the set of comment fields".
     'comment_notes_after' => '',
     // Submit Button ID
-    'id_submit' => __( 'comment-submit' ),
+    'id_submit' => __( 'comment-submit', 'molde-theme' ),
 );
 comment_form( $comments_args );
 ?>

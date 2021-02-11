@@ -136,8 +136,11 @@ function molde_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'molde_excerpt_more' );
 
 
-/************* COMMENT LAYOUT *********************/
+/**********************************
+COMMENT LAYOUT
+***********************************/
 // A better and more semantic comment layout
+
 function molde_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
     <article id="comment-<?php comment_ID(); ?>" itemprop="comment" itemscope itemtype="http://schema.org/Comment">

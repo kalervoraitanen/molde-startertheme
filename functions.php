@@ -82,18 +82,23 @@ function molde_setup() {
 
   // Enqueue base scripts and styles
   add_action( 'wp_enqueue_scripts', 'molde_scripts_and_styles', 999 );
-
 }
-
 add_action( 'after_setup_theme', 'molde_setup' );
 
+
 /* Register one sidebar by default */
-function molde_register_sidebars() {
-  register_sidebar(array(
-    'id' => 'sidebar1',
-    'name' => __( 'Sidebar', 'molde-theme' ),
-    'description' => __( 'The primary sidebar.', 'molde-theme' ),
-  ));
+function harmony_register_sidebars() {
+  register_sidebar(
+    array(
+      'name'          => esc_html__( 'Sidebar', 'molde-theme' ),
+      'id'            => 'sidebar-1',
+      'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'molde-theme' ),
+      'before_widget' => '<section id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+    )
+  );
 }
 
 

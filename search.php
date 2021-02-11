@@ -5,7 +5,7 @@
 	<?php /* If posts found show search word title */ ?>
 	<?php if ( have_posts() ) : ?>
 	
-		<h1 class="entry-title"><?php _e( 'Search results for: ', 'molde-theme' ); ?><span class="archive-title"><?php echo esc_attr(get_search_query()); ?></span></h1>
+		<h1 class="entry-title"><?php _e( 'Search results for: ', 'molde-theme' ); ?><span class="archive-title"><?php echo esc_html( get_search_query() ); ?></span></h1>
 	
 	<?php endif; ?>
 

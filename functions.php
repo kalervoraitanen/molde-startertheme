@@ -145,9 +145,6 @@ function molde_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
     <article id="comment-<?php comment_ID(); ?>" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
       <header class="comment-author">
-        <?php
-          $bgauthemail = get_comment_author_email();
-        ?>
         <?php printf(__( '<cite itemprop="author">%1$s</cite> %2$s', 'molde-theme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'molde-theme' ),'  ','') ) ?>
         <time datetime="<?php echo comment_time('Y-n-j H:i'); ?>" itemprop="datePublished dateModified dateCreated"><?php comment_time('j/n/Y H:i'); ?></time>
 

@@ -1,0 +1,156 @@
+/******************************************************************
+Site Name: Harmony
+
+Stylesheet: General styles Stylesheet
+******************************************************************/
+
+/******************************************************************
+GENERAL STYLES
+******************************************************************/
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+figure {
+	display: block;
+	height: auto;	
+	margin: 0;
+	max-width: 100%;
+}
+
+
+/******************************************************************
+ACCESSIBILITY STYLES
+******************************************************************/
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+
+  &:focus {
+	  background-color: #eee;
+	  clip: auto !important;
+	  clip-path: none;
+	  color: #444;
+	  display: block;
+	  font-size: 1em;
+	  height: auto;
+	  left: 5px;
+	  line-height: normal;
+	  padding: 15px 23px 14px;
+	  text-decoration: none;
+	  top: 5px;
+	  width: auto;
+	  z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+
+/* Skip to main content link */
+
+.skip-link:focus {
+	clip: auto !important;
+	-webkit-clip-path: none;
+	clip-path: none;
+	display: block;
+	height: auto;
+	text-decoration: none;
+	width: auto;
+	z-index: 100000;
+}
+
+
+a.skip-link:focus {
+	outline: 2px solid blue;
+}
+
+
+/******************************************************************
+CLEARINGS
+******************************************************************/
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table
+}
+
+.cf:after {
+    clear: both
+}
+
+.cf {
+    *zoom: 1
+}
+
+
+/******************************************************************
+WORDPRESS DEFAULT STYLES
+******************************************************************/
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 1.5em 0 0;	
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 0 1.5em;	
+}
+
+.wp-block-image {
+	margin: 0 0 1em 0;
+}
+
+.wp-block-cover {
+	color: $white;
+}
+
+.wp-block-cover-text {
+	text-shadow: -1px -1px 1px #000,
+								1px -1px 1px #000,
+							 -1px 1px 1px #000,
+								1px 1px 1px #000;
+}
+
+.wp-block-gallery {
+	margin: 0 0 2em 0;
+}
+
+.wp-caption {
+	max-width: 100%;
+	width: auto !important;	
+}
+
+.wp-caption-text {
+	margin: 0.5em 0;
+}
+
+.gallery-caption {
+	display: block;
+	max-width: 100%;
+}
+
+.bypostauthor {
+	border: 1px solid $light-gray;
+}

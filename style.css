@@ -1,11 +1,16 @@
 /*
 Theme Name: Molde starter theme
-Theme URI: 
+Theme URI: https://github.com/kalervoraitanen/molde-startertheme
 Author: Kalervo Raitanen
 Author URI: http://www.kalervoraitanen.com/
 Description: Molde starter theme.
+Requires at least: 5.3
+Tested up to: 5.6
+Requires PHP: 5.6
 Version: 1.0
-Tags: accessibility-ready, translation-ready, microdata
+License: WTFPL
+License URI: https://en.wikipedia.org/wiki/WTFPL
+Tags: translation-ready, theme-options, custom-colors, custom-menu, custom-logo, featured-images, post-formats, sticky-post, threaded-comments, microformats
 Text Domain: molde-theme
 Domain Path: /languages
 
@@ -25,3 +30,8 @@ minify it to assets/js/scripts.min.js
 You can change the used filenames and folders in functions.php file.
 
 ---------------------------------------------------------------
+*/
+
+/* .sticky class is here to keep the Theme Check happy.
+You can add it to your CSS later and remove it from here. */
+.sticky {}

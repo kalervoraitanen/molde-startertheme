@@ -23,6 +23,7 @@ The header for Molde theme
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<?php wp_body_open(); ?>
 
 		<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 			

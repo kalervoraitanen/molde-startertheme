@@ -16,12 +16,6 @@ The header for Molde theme
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<?php // Or, set /favicon.ico for IE10 win ?>
-
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 

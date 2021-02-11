@@ -41,7 +41,18 @@ function molde_setup() {
       'flex-width' => true,
     )
   );
-    
+
+  // Add custom background color and image support
+  add_theme_support( 'custom-background',
+      array(
+      'default-image' => '',    // Background image default
+      'default-color' => '',    // Background color default (don't add the #)
+      'wp-head-callback' => '_custom_background_cb',
+      'admin-head-callback' => '',
+      'admin-preview-callback' => ''
+      )
+  );  
+
   /* Register one menu by default */
   register_nav_menus(
     array(

@@ -101,6 +101,11 @@ function harmony_register_sidebars() {
   );
 }
 
+function molde_content_width() {
+  // This variable is intended to be overruled from themes.
+  $GLOBALS['content_width'] = apply_filters( 'molde_content_width', 768 );
+}
+add_action( 'after_setup_theme', 'molde_content_width', 0 );
 
 // Remove some options like background image from Theme Customizer. You can remove these if you choose to use them.
 function molde_theme_customizer($wp_customize) {

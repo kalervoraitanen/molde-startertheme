@@ -1,7 +1,7 @@
 <aside id="sidebar" role="complementary" aria-label="<?php esc_attr_e( 'Blog Sidebar', 'harmony' ); ?>">
 
 	<?php /* If sidebar is active show it's content */ ?>
-	<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 

@@ -32,10 +32,10 @@ The header for Molde theme
 
 			<?php /* If we're on the front page show site title as h1 */ ?>
 			<?php if ( is_front_page() ) : ?>
-				<h1 class="site-logo site-title" itemprop="headline"><a href="<?php echo home_url(); ?>" rel="nofollow" itemprop="url"><?php bloginfo('name'); ?></a></h1>
+				<h1 class="site-logo site-title" itemprop="headline"><a href="<?php echo esc_url( home_url() ); ?>" rel="nofollow" itemprop="url"><?php bloginfo('name'); ?></a></h1>
 			<?php /* Else show the site title as paragraph */ ?>
 			<?php else : ?>
-				<p class="site-logo site-title" itemprop="headline"><a href="<?php echo home_url(); ?>" rel="nofollow" itemprop="url"><?php bloginfo('name'); ?></a></p>
+				<p class="site-logo site-title" itemprop="headline"><a href="<?php echo esc_url( home_url() ); ?>" rel="nofollow" itemprop="url"><?php bloginfo('name'); ?></a></p>
 			<?php endif; ?>
 
 			<p class="site-description" itemprop="alternativeHeadline"><?php bloginfo('description'); ?></p>

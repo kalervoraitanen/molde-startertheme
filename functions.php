@@ -175,7 +175,7 @@ function molde_scripts_and_styles() {
 
     // Uncomment the below wp_register_script to enable Modernizr. Modernizr is used to tell what
     // HTML, CSS and JavaScript features the user’s browser has to offer so you can use the info in your CSS.
-    // If you enable this you can remove the 'nomanuscript_javascript_detection' function call since Modernizr
+    // If you enable this you can remove the 'molde_javascript_detection' function call since Modernizr
     // adds the 'js' class to HTML. You can download the latest Modernizr library from https://modernizr.com/
     //
     //wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/assets/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );

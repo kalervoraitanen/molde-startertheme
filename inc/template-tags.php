@@ -12,22 +12,29 @@ PRINT CATEGORIES AND TAGS
 if ( ! function_exists( 'molde_categories_tags' ) ) :
 
 	function molde_categories_tags() {
+    // Get Categories for posts.
+    $categories_list = get_the_category_list( ', ' );
 
-		echo '<p class="entry-meta">';
+    /* Show post categories if categories found */ 
+    if ( $categories_list ) {
+		  echo '<p class="entry-meta">';
 
-			/* Show post categories */ 
-	  	printf( __( 'Categories', 'molde-theme' ).': %1$s', get_the_category_list(', ') );
+		      echo __( 'Categories', 'molde-theme' ) . ': ' . $categories_list;
 
-		echo '</p>
+		  echo '</p>';
+		}
 
-		<p class="entry-meta">';
+	  // Get Tags for posts.
+	  $tags_list = get_the_tag_list( '', ', ' );
 
-			/* Show post tags */
-	  echo '<span itemprop="keywords">';
-	  	the_tags( __( 'Tags: ', 'molde-theme' ) );
-	  echo '</span>
+		/* Show post tags if tags found */ 
+	  if ( $tags_list && ! is_wp_error( $tags_list ) ) {
+	  	echo '<p class="entry-meta">';
 
-		</p>';
+	    echo __( 'Tags', 'molde-theme' ) . ': ' . $tags_list;
+
+	  	echo '</p>';	    
+	  }
 	}
 endif;
 

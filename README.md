@@ -9,7 +9,7 @@ With a Mobile-First approach Molde serves up only the minimum to small devices a
 
 Molde is translation ready and accessibility ready. It scores 100 in Accessibility in Google's Lighthouse audit.
 
-And what's best it is totally free. You can do what ever you want with it, even money!
+And what's best it is totally free. You can do what ever you want with it, even money! However you are forbidden to hold me liable for anything, or claim that what you do with this is made by me.
 
 Designed by Kalervo Raitanen
 http://www.kalervoraitanen.com

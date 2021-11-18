@@ -2,42 +2,52 @@
  * Molde Scripts File
 */
 
-jQuery(document).ready(function($) { // Start of jQuery
+// Wait till the DOM is fully loaded
+window.addEventListener('DOMContentLoaded', (event) => {
 
-/*
- * Put your jQuery code here
-*/
-
-	// Change the aria-expanded value depending wheter
+  // Change the aria-expanded value depending wheter
 	// the navigation is expanded or not
-  $(".nav-button").click(function() {
-    $(".main-nav").toggleClass("active");
+  document.querySelector(".nav-button").addEventListener('click', handleNavBtn );
+  
+  function handleNavBtn(event) {
+    let expanded = this.getAttribute("aria-expanded");
 
-    if( $(this).attr('aria-expanded') === 'true' ) {
-      $(this).attr( 'aria-expanded', 'false');
+    document.querySelector(".main-nav").classList.toggle("active");
+
+    if (expanded == "false") {
+      this.setAttribute("aria-expanded", "true");
     }
     else {
-      $(this).attr( 'aria-expanded', 'true');       
-    }   
-  });
+      this.setAttribute("aria-expanded", "false");
+    }
+  }
 
-	// Change the aria-expanded value depending wheter
+
+ 	// Change the aria-expanded value depending wheter
 	// the search is expanded or not
-  $(".search-toggle").click(function(event) {
-    $(".searchform").toggleClass("active");
 
-    // Change the search icon button
-    if( $(".searchform").hasClass("active") )
-      $(".search-icon").html("x");
-    else
-      $(".search-icon").html("&#9906;");
+  document.querySelector(".search-toggle").addEventListener('click', handleSearchBtn );
 
-    if( $(this).attr('aria-expanded') === 'true' ) {
-      $(this).attr( 'aria-expanded', 'false');
+  function handleSearchBtn(event) {
+    let searchForm = document.querySelector(".searchform");
+    let searchIcon = document.querySelector(".search-icon");
+    let expanded = this.getAttribute("aria-expanded");
+
+    searchForm.classList.toggle("active");
+
+    if ( searchForm.classList.contains("active") ) {
+      searchIcon.innerHTML = "x";
     }
     else {
-      $(this).attr( 'aria-expanded', 'true');       
-    }   
-  });
+      searchIcon.innerHTML = "&#9906;";
+    }
 
-}); // End of jQuery
+    if ( expanded === "false" ) {
+      this.setAttribute("aria-expanded", "true");
+    }
+    else {
+      this.setAttribute("aria-expanded", "false");
+    }
+
+  }
+});

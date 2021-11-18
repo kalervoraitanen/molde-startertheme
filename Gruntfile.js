@@ -11,13 +11,7 @@ module.exports = function(grunt) {
         src: ['assets/css/style.css'],
         dest: 'assets/css/style.min.css',
       },
-    },
-    uglify: {
-      build: {
-        src: 'source/js/scripts.js',
-        dest: 'assets/js/scripts.min.js',
-      },
-    },    
+    }, 
     sass: {
       dist: {
         options: {
@@ -41,7 +35,6 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: ['source/js/scripts.js'],
-        tasks: ['uglify']
       },      
       css: {
         files: 'source/scss/style.scss',
@@ -51,7 +44,6 @@ module.exports = function(grunt) {
    });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');

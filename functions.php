@@ -184,14 +184,20 @@ function molde_scripts_and_styles() {
     wp_register_style( 'molde-stylesheet', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), '', 'all' );
 
     // Adding scripts file in the footer
-    wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), '', true );
+    wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array(), '', true );
+
+    // Or uncomment the below line to use jQuery in your scripts
+    // wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
 
     // Enqueue styles and scripts
     wp_enqueue_style( 'molde-stylesheet' );
 
     // Uncomment the below line to enable Modernizr
     //wp_enqueue_script( 'modernizr' );
-    wp_enqueue_script( 'jquery' );
+
+    // Uncomment the below line to enable jQuery
+    // wp_enqueue_script( 'jquery' );
+    
     wp_enqueue_script( 'molde-js' );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

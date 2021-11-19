@@ -13,7 +13,7 @@
 
 				<p class="entry-meta">
 					<?php printf( __( 'Posted', 'molde-theme' ).' %1$s',
-	         '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_date('d/m/Y H:i') . '</time>',
+	         '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_date('d/m/Y H:i') . '</time>'
 	        ); ?>
 				</p>
 

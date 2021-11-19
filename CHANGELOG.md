@@ -3,6 +3,7 @@
 
 /* 1.2 update */
 - Changed from jQuery to Vanilla JavaScript
+- Fixed some WordPress Theme Sniffer reported errors
 
 /* 1.1 update */
 - Added support for post formats

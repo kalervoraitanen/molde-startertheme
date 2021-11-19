@@ -4,12 +4,10 @@
 
 // Wait till the DOM is fully loaded
 window.addEventListener('DOMContentLoaded', (event) => {
-
+  
   // Change the aria-expanded value depending wheter
 	// the navigation is expanded or not
-  document.querySelector(".nav-button").addEventListener('click', handleNavBtn );
-  
-  function handleNavBtn(event) {
+  const handleNavBtn = function (event) {
     let expanded = this.getAttribute("aria-expanded");
 
     document.querySelector(".main-nav").classList.toggle("active");
@@ -22,13 +20,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
   }
 
+  // Check if the navigation button is clicked
+  document.querySelector(".nav-button").addEventListener('click', handleNavBtn );
+
 
  	// Change the aria-expanded value depending wheter
 	// the search is expanded or not
-
-  document.querySelector(".search-toggle").addEventListener('click', handleSearchBtn );
-
-  function handleSearchBtn(event) {
+  const handleSearchBtn = function (event) {
     let searchForm = document.querySelector(".searchform");
     let searchIcon = document.querySelector(".search-icon");
     let expanded = this.getAttribute("aria-expanded");
@@ -48,6 +46,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     else {
       this.setAttribute("aria-expanded", "false");
     }
+  } 
 
-  }
+   // Check if the search toggle button is clicked
+  document.querySelector(".search-toggle").addEventListener('click', handleSearchBtn );
+
 });

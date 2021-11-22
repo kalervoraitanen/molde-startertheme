@@ -142,7 +142,7 @@ COMMENT LAYOUT
 // A better and more semantic comment layout
 
 function molde_comments( $comment, $args, $depth ) {
-   $GLOBALS['comment'] = $comment; ?>
+ ?>
     <article id="comment-<?php comment_ID(); ?>" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
       <header class="comment-author">
         <?php printf(__( '<cite itemprop="author">%1$s</cite> %2$s', 'molde-theme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'molde-theme' ),'  ','') ) ?>

@@ -6,7 +6,7 @@
 
       <p class="entry-date">
         <span class="screen-reader-text"><?php echo __( 'Posted', 'molde-theme' ) ?> </span>
-        <time class="updated entry-time" datetime="<?php echo get_the_time('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); _e( ' at ', 'molde-theme' ); echo get_the_date('H:i'); ?></time>
+        <time class="updated entry-time" datetime="<?php echo esc_attr(get_the_time('c')); ?>" itemprop="datePublished"><?php echo get_the_date(); _e( ' at ', 'molde-theme' ); echo get_the_date('H:i'); ?></time>
       </p>
 
     </header>

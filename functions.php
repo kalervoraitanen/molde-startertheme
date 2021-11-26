@@ -80,7 +80,7 @@ function molde_setup() {
   {
       function start_lvl( &$output, $depth = 0, $args = array() ) {
           $indent = str_repeat("\t", $depth);
-          $output .= "\n$indent<button type='button' class='dropdown-toggle' aria-expanded='false'>+</button><ul class='sub-menu'>\n";
+          $output .= "\n$indent<button type='button' class='dropdown-toggle' aria-expanded='false' aria-label='" . esc_attr('Open child menu', 'molde-theme') . "'>+</button><ul class='sub-menu'>\n";
       }
       function end_lvl( &$output, $depth = 0, $args = array() ) {
           $indent = str_repeat("\t", $depth);

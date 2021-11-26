@@ -49,8 +49,8 @@ msgid "Categories"
 msgstr "Kategoriat"
 
 #: archive.php:93
-msgid "Tags: "
-msgstr "Avainsanat: "
+msgid "Tags"
+msgstr "Avainsanat"
 
 #: archive.php:120
 msgid "Post not found!"

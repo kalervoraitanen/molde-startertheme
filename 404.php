@@ -6,13 +6,13 @@
 
 			<header class="article-header">
 
-				<h1 itemprop="headline"><?php _e( '404 - Post not found', 'molde-theme' ); ?></h1>
+				<h1 itemprop="headline"><?php esc_html_e( '404 - Post not found', 'molde-theme' ); ?></h1>
 
 			</header>
 
 			<section class="cf entry-content" itemprop="articleBody">
 
-				<p><?php _e( 'The post you were trying to look for was not found. Please check the address or use the search.', 'molde-theme' ); ?></p>
+				<p><?php esc_html_e( 'The post you were trying to look for was not found. Please check the address or use the search.', 'molde-theme' ); ?></p>
 
 				<?php get_search_form(); // Show search form ?>
 				

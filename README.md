@@ -2,7 +2,7 @@
 A lightweight WordPress Development Theme
 
 Molde is designed to give a strong semantic and lightweight foundation to a theme.
-It is highly SEO optimized and it scores by default 90 in SEO in Google's Lighthouse audit.
+It is highly Search Engine optimized especially for blogs and it scores by default 90 in SEO in Google's Lighthouse audit.
 It is meant to be used as a starter theme which you can use to develop your own theme.
 
 With a Mobile-First approach Molde serves up only the minimum to small devices and progressively enhances for larger viewports.

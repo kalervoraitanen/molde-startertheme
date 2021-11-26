@@ -13,7 +13,7 @@ The archive page for Molde theme
 
 		<h1 class="entry-title">
 
-			<?php _e( 'Posts Categorized:', 'molde-theme' ); ?> <span class="archive-title"><?php single_cat_title(); ?></span>
+			<?php esc_html_e( 'Posts Categorized:', 'molde-theme' ); ?> <span class="archive-title"><?php single_cat_title(); ?></span>
 
 		</h1>
 
@@ -22,7 +22,7 @@ The archive page for Molde theme
 
 		<h1 class="entry-title">
 
-			<?php _e( 'Posts Tagged:', 'molde-theme' ); ?> <span class="archive-title"><?php single_tag_title(); ?></span>
+			<?php esc_html_e( 'Posts Tagged:', 'molde-theme' ); ?> <span class="archive-title"><?php single_tag_title(); ?></span>
 
 		</h1>
 
@@ -33,7 +33,7 @@ The archive page for Molde theme
 	?>
 		<h1 class="entry-title">
 
-			<?php _e( 'Posts By:', 'molde-theme' ); ?> <span class="archive-title"><?php the_author_meta('display_name', $author_id); ?></span>
+			<?php esc_html_e( 'Posts By:', 'molde-theme' ); ?> <span class="archive-title"><?php the_author_meta('display_name', $author_id); ?></span>
 
 		</h1>
 
@@ -42,7 +42,7 @@ The archive page for Molde theme
 
 		<h1 class="entry-title">
 
-			<?php _e( 'Daily Archives:', 'molde-theme' ); ?> <span class="archive-title"><?php the_time('l, F j, Y'); ?></span>
+			<?php esc_html_e( 'Daily Archives:', 'molde-theme' ); ?> <span class="archive-title"><?php the_time('l, F j, Y'); ?></span>
 
 		</h1>
 
@@ -51,7 +51,7 @@ The archive page for Molde theme
 
 		<h1 class="entry-title">
 
-			<?php _e( 'Monthly Archives:', 'molde-theme' ); ?> <span class="archive-title"><?php the_time('F Y'); ?></span>
+			<?php esc_html_e( 'Monthly Archives:', 'molde-theme' ); ?> <span class="archive-title"><?php the_time('F Y'); ?></span>
 
 		</h1>
 
@@ -60,7 +60,7 @@ The archive page for Molde theme
 
 		<h1 class="entry-title">
 
-			<?php _e( 'Yearly Archives:', 'molde-theme' ); ?> <span class="archive-title"><?php the_time('Y'); ?>
+			<?php esc_html_e( 'Yearly Archives:', 'molde-theme' ); ?> <span class="archive-title"><?php the_time('Y'); ?>
 
 		</h1>
 	<?php } ?>
@@ -75,8 +75,8 @@ The archive page for Molde theme
 				<h2 class="entry-title" itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" itemprop="url"><?php the_title(); ?></a></h2>
 
 				<p class="entry-meta">
-					<?php printf( __( 'Posted', 'molde-theme' ).' %1$s',
-	         '<time class="updated entry-time" datetime="' . get_the_time('c') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+					<?php printf( esc_html__( 'Posted', 'molde-theme' ).' %1$s',
+	         '<time class="updated entry-time" datetime="' . esc_attr(get_the_time('c')) . '" itemprop="datePublished">' . esc_attr(get_the_time(get_option('date_format'))) . '</time>'
 	     		 ); ?>
 				</p>
 

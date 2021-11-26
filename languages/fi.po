@@ -49,8 +49,8 @@ msgid "Categories"
 msgstr "Kategoriat"
 
 #: archive.php:93
-msgid "Tags: "
-msgstr "Avainsanat: "
+msgid "Tags"
+msgstr "Avainsanat"
 
 #: archive.php:120
 msgid "Post not found!"
@@ -163,6 +163,10 @@ msgstr "Sivupalkki"
 #: functions.php:52
 msgid "The primary sidebar."
 msgstr "Ensisijainen sivupalkki."
+
+#: functions.php:83
+msgid "Open child menu"
+msgstr "Avaa alavalikko"
 
 #: functions.php:90
 msgid "Continue reading"

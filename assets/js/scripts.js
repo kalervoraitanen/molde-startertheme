@@ -51,4 +51,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
    // Check if the search toggle button is clicked
   document.querySelector(".search-toggle").addEventListener('click', handleSearchBtn );
 
+  // Add menu items with submenus to aria-haspopup="true".
+  document.querySelectorAll( '.menu-item-has-children' ).forEach(item => item.setAttribute( 'aria-haspopup', 'true' ));
+
+  const handleDropDownBtns = function (event) {
+    event.preventDefault();
+    this.classList.toggle( 'toggled-on' );
+    console.log(this);
+    if ( this.classList.contains("toggled-on") ) {
+      this.innerText = "-";
+      this.setAttribute( 'aria-expanded', 'true' );
+    }
+    else {
+      this.innerText = "+";
+      this.setAttribute( 'aria-expanded', 'false' );
+    }
+    this.nextSibling.classList.toggle( 'toggled-on' );
+  }
+  // Watch if the dropdown button is clicked
+  document.querySelectorAll( '.dropdown-toggle' ).forEach(btn => btn.addEventListener('click', handleDropDownBtns )); 
+
 });

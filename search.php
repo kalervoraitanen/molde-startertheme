@@ -20,7 +20,7 @@
 
 				<p class="entry-meta">
 					<?php printf( __( 'Posted', 'molde-theme' ).' %1$s',
-	         '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+	         '<time class="updated entry-time" datetime="' . get_the_time('c') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
 	     		 ); ?>
 				</p>
 

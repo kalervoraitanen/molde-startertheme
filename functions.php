@@ -146,7 +146,7 @@ function molde_comments( $comment, $args, $depth ) {
     <article id="comment-<?php comment_ID(); ?>" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
       <header class="comment-author">
         <?php printf(__( '<cite itemprop="author">%1$s</cite> %2$s', 'molde-theme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'molde-theme' ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-n-j H:i'); ?>" itemprop="datePublished dateModified dateCreated"><?php comment_date(); _e( ' at ', 'molde-theme' ); comment_time(); ?></time>
+        <time datetime="<?php echo comment_time(c); ?>" itemprop="datePublished dateModified dateCreated"><?php comment_date(); _e( ' at ', 'molde-theme' ); comment_time(); ?></time>
 
       </header>
       <?php if ($comment->comment_approved == '0') : ?>

@@ -1,6 +1,11 @@
 # MOLDE CHANGE LOG & HISTORY
 *******************************************************************
 
+/* 2.0 update */
+- Added new functionality to add dropdown buttons to all menuitems with submenus.
+- Fixed some datetime attributes in timestamps.
+- Did some output escaping in several files.
+
 /* 1.2 update */
 - Changed from jQuery to Vanilla JavaScript
 - Fixed some WordPress Theme Sniffer reported errors

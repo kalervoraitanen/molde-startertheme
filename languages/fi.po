@@ -49,8 +49,8 @@ msgid "Categories"
 msgstr "Kategoriat"
 
 #: archive.php:93
-msgid "Tags"
-msgstr "Avainsanat"
+msgid "Tags: "
+msgstr "Avainsanat: "
 
 #: archive.php:120
 msgid "Post not found!"
@@ -164,10 +164,6 @@ msgstr "Sivupalkki"
 msgid "The primary sidebar."
 msgstr "Ensisijainen sivupalkki."
 
-#: functions.php:83
-msgid "Open child menu"
-msgstr "Avaa alavalikko"
-
 #: functions.php:90
 msgid "Continue reading"
 msgstr "Lue lisää"
@@ -231,3 +227,7 @@ msgstr "Hae"
 #: single.php:85
 msgid "This is the error message in the single.php template."
 msgstr "Tämä on virheilmoitus single.php -sivupohjassa."
+
+#: format.php:16
+msgid " at "
+msgstr " klo "

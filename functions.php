@@ -75,6 +75,20 @@ function molde_setup() {
     )
   );
 
+  /* Add dropdown toggle button to all menu items with submenus */
+  class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
+  {
+      function start_lvl( &$output, $depth = 0, $args = array() ) {
+          $indent = str_repeat("\t", $depth);
+          $output .= "\n$indent<button type='button' class='dropdown-toggle' aria-expanded='false'>+</button><ul class='sub-menu'>\n";
+      }
+      function end_lvl( &$output, $depth = 0, $args = array() ) {
+          $indent = str_repeat("\t", $depth);
+          $output .= "$indent</ul>\n";
+      }
+  }
+
+
   // Add support for Block Styles.
   add_theme_support( 'wp-block-styles' );  
 

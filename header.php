@@ -46,20 +46,27 @@ The header for Molde theme
 
 			<?php /* Show main navigation */ ?>
 			<nav class="main-nav" role="navigation" aria-label="<?php _e( 'Primary menu', 'molde-theme' ); ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
-				<?php wp_nav_menu(array(
-					         'container' => false,                           // Remove nav container
-					         'container_class' => '',              				   // Class of container (should you choose to use it)
-					         'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>', // Markup to wrap menuitems
-					         'menu' => __( 'The Main Menu', 'molde-theme' ), // Nav name
-					         'menu_class' => '',            							   // Adding custom nav class
-					         'theme_location' => 'main-nav',                 // Where it's located in the theme
-					         'before' => '',                                 // Before the menu
-    			               'after' => '',                            // After the menu
-    			               'link_before' => '',                      // Before each link
-    			               'link_after' => '',                       // After each link
-    			               'depth' => 0,                             // Limit the depth of the nav
-					         'fallback_cb' => ''                             // Fallback function (if there is one)
-				)); ?>
+			<?php
+				$header_menu_defaults = array(
+					'theme_location'  => 'main-nav',
+					'menu'            =>  __( 'The Main Menu', 'molde-theme' ),
+					'container'       => '',
+					'container_class' => '',
+					'container_id'    => '',
+					'menu_class'      => '',
+					'menu_id'         => '',
+					'echo'            => true,
+					'fallback_cb'     => 'wp_page_menu',
+					'before'          => '',
+					'after'           => '',
+					'link_before'     => '',
+					'link_after'      => '',
+					'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'depth'           => 0,
+					'walker'         => new Add_button_of_Sublevel_Walker
+				);
+				wp_nav_menu( $header_menu_defaults );
+				?>
 
 				<?php /* Search button to show search from. You can implement this with Javascript. */ ?>
 				<button class="search-toggle" aria-expanded="false" aria-haspopup="true">

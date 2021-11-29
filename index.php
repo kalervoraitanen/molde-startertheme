@@ -12,9 +12,8 @@
 				<h2 class="entry-title" itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" itemprop="url"><?php the_title(); ?></a></h2>
 
 				<p class="entry-meta">
-					<?php printf( __( 'Posted', 'molde-theme' ).' %1$s',
-	         '<time class="updated entry-time" datetime="' . get_the_time('c') . '" itemprop="datePublished">' . get_the_date('d/m/Y H:i') . '</time>'
-	        ); ?>
+					<span class="screen-reader-text"><?php echo esc_html__( 'Posted', 'molde-theme' ) ?> </span>
+        			<time class="updated entry-time" datetime="<?php echo esc_attr(get_the_time('c')); ?>" itemprop="datePublished"><?php echo get_the_date(); esc_html_e( ' at ', 'molde-theme' ); echo get_the_time(); ?></time>
 				</p>
 
 			</header>

@@ -10,8 +10,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const handleNavBtn = function (event) {
     let expanded = this.getAttribute("aria-expanded");
 
-    document.querySelector(".main-nav").classList.toggle("active");
-
     if (expanded == "false") {
       this.setAttribute("aria-expanded", "true");
     }

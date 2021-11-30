@@ -41,9 +41,11 @@ The header for Molde theme
 			<?php endif; ?>
 
 			<p class="site-description" itemprop="alternativeHeadline"><?php bloginfo('description'); ?></p>
-
-			<button class="nav-button" aria-controls="primary-menu-list" aria-expanded="false" aria-haspopup="true">Menu</button>
-
+			
+			<div class="nav-btn-wrap">
+				<button class="nav-button" aria-controls="primary-menu-list" aria-expanded="false" aria-haspopup="true">Menu</button>
+			</div>
+		
 			<?php /* Show main navigation */ ?>
 			<nav class="main-nav" role="navigation" aria-label="<?php _e( 'Primary menu', 'molde-theme' ); ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
 			<?php
@@ -69,11 +71,11 @@ The header for Molde theme
 				?>
 
 				<?php /* Search button to show search from. You can implement this with Javascript. */ ?>
-				<button class="search-toggle" aria-expanded="false" aria-haspopup="true">
-
-					<span class="screen-reader-text"><?php _e('Toggle search', 'molde-theme'); ?></span><span class="search-icon">&#9906;</span>
-
-				</button>
+				<div class="search-toggle-wrap">
+					<button class="search-toggle" aria-expanded="false" aria-haspopup="true">
+						<span class="screen-reader-text"><?php _e('Toggle search', 'molde-theme'); ?></span><span class="search-icon">&#9906;</span>
+					</button>
+				</div>
 
 				<?php /* Show search form */ ?>
 				<?php get_search_form(); ?>					

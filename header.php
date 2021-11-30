@@ -68,9 +68,11 @@ The header for Molde theme
 					'walker'         => new Add_button_of_Sublevel_Walker
 				);
 				wp_nav_menu( $header_menu_defaults );
-				?>
+				?>				
 
-				<?php /* Search button to show search from. You can implement this with Javascript. */ ?>
+			</nav>
+
+			<?php /* Search button to show search from. You can implement this with Javascript. */ ?>
 				<div class="search-toggle-wrap">
 					<button class="search-toggle" aria-expanded="false" aria-haspopup="true">
 						<span class="screen-reader-text"><?php _e('Toggle search', 'molde-theme'); ?></span><span class="search-icon">&#9906;</span>
@@ -78,8 +80,6 @@ The header for Molde theme
 				</div>
 
 				<?php /* Show search form */ ?>
-				<?php get_search_form(); ?>					
-
-			</nav>
+				<?php get_search_form(); ?>				
 
 		</header>

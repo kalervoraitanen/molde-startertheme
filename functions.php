@@ -197,14 +197,22 @@ function molde_scripts_and_styles() {
     // Register main stylesheet
     wp_register_style( 'molde-stylesheet', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), '', 'all' );
 
+    // Register demo stylesheet. Uncomment one of the below lines to activate the demo style. Remember to uncomment just one style.
+    // wp_register_style( 'demo1-stylesheet', get_stylesheet_directory_uri() . '/demos/demo1/style.css', array(), '', 'all' );    
+
     // Adding scripts file in the footer
     wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array(), '', true );
+
+    // Register demo scripts file. Uncomment one of the below lines to activate the demo scripts file. Remember to uncomment just one file.
+    // wp_register_script( 'demo1-js', get_stylesheet_directory_uri() . '/demos/demo1/scripts.js', array(), '', true );
 
     // Or uncomment the below line to use jQuery in your scripts
     // wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
 
-    // Enqueue styles and scripts
+    // Enqueue main stylesheet
     wp_enqueue_style( 'molde-stylesheet' );
+    // Enqueue demo stylesheet. Uncomment one of the below lines to activate the demo style. Remember to uncomment just one style.
+    //wp_enqueue_style( 'demo1-stylesheet' );
 
     // Uncomment the below line to enable Modernizr
     //wp_enqueue_script( 'modernizr' );
@@ -213,6 +221,9 @@ function molde_scripts_and_styles() {
     // wp_enqueue_script( 'jquery' );
     
     wp_enqueue_script( 'molde-js' );
+
+    // Register demo scripts file. Uncomment one of the below lines to activate the demo scripts file. Remember to uncomment just one file.
+    //wp_enqueue_script( 'demo1-js' );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
       wp_enqueue_script( 'comment-reply' );

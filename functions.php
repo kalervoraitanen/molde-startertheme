@@ -203,14 +203,15 @@ function molde_scripts_and_styles() {
     // Adding scripts file in the footer
     wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array(), '', true );
 
-    // Register demo scripts file. Uncomment one of the below lines to activate the demo scripts file. Remember to uncomment just one file.
-    // wp_register_script( 'demo1-js', get_stylesheet_directory_uri() . '/demos/demo1/scripts.js', array(), '', true );
-
     // Or uncomment the below line to use jQuery in your scripts
     // wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
 
+    // Register demo scripts file. Uncomment one of the below lines to activate the demo scripts file. Remember to uncomment just one file.
+    // wp_register_script( 'demo1-js', get_stylesheet_directory_uri() . '/demos/demo1/scripts.js', array(), '', true );
+
     // Enqueue main stylesheet
     wp_enqueue_style( 'molde-stylesheet' );
+    
     // Enqueue demo stylesheet. Uncomment one of the below lines to activate the demo style. Remember to uncomment just one style.
     //wp_enqueue_style( 'demo1-stylesheet' );
 

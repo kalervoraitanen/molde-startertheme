@@ -3,6 +3,7 @@
 
 /* 2.0 update */
 - Added new functionality to add dropdown buttons to all menuitems with submenus.
+- Added a new demo. See the README.md file to get instructions how to activate a demo.
 - Fixed some datetime attributes in timestamps.
 - Did some output escaping in several files.
 

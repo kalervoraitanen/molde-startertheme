@@ -16,53 +16,48 @@ var observer = new IntersectionObserver(
   },
   {}
 )
-
 for (let img of document.getElementsByTagName('img')) {
   observer.observe(img);
 }
 
 
 // Add class to <body> element when the search form is expanded.
-
 const handleSearchToggle = function (event) {
   document.querySelector("body").classList.toggle("searchform-open");     
 }
-
 document.querySelector(".search-toggle").addEventListener('click', handleSearchToggle ); 
 
 
-/**
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
+/* Navigation handling with keyboard navigation support. */
  ( function() {
 	const siteNavigation = document.querySelector( '.main-nav' );
 
-	// Return early if the navigation don't exist.
+	/* Check if navigation is set */
 	if ( ! siteNavigation ) {
 		return;
 	}
 
 	const button = document.querySelector( '.nav-button' );
 
-	// Return early if the button don't exist.
+	// Check if navigation toggle button is set */
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
 
 	const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
 
-	// Hide menu toggle button if menu is empty and return early.
+	// Hide menu toggle button if navigation menu is empty.
 	if ( 'undefined' === typeof menu ) {
 		button.style.display = 'none';
 		return;
 	}
 
+	/* Check if navigation menu list has a class "nav-menu" otherwise add the class */
 	if ( ! menu.classList.contains( 'nav-menu' ) ) {
 		menu.classList.add( 'nav-menu' );
 	}
 
-	// Toggle the .toggled class each time the button is clicked.
+	// Toggle the .active class each time the button is clicked.
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle('active');
 		button.classList.toggle('close');
@@ -87,9 +82,7 @@ document.querySelector(".search-toggle").addEventListener('click', handleSearchT
 		link.addEventListener( 'touchstart', toggleFocus, false );
 	}
 
-	/**
-	 * Sets or removes .focus class on an element.
-	 */
+	/* Toggles .focus class on an element. */
 	function toggleFocus() {
 		if ( event.type === 'focus' || event.type === 'blur' ) {
 			let self = this;
@@ -115,3 +108,4 @@ document.querySelector(".search-toggle").addEventListener('click', handleSearchT
 		}
 	}
 }() );
+/* End of navigation handling */

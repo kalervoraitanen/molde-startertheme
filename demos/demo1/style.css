@@ -1,0 +1,1411 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Molde Starter Theme - Demo1
+Theme URI: https://github.com/kalervoraitanen/molde-startertheme
+Author: Kalervo Raitanen
+Author URI: http://www.kalervoraitanen.com
+Description: Molde Starter Theme - Demo1 is an elegant and lightweight blogging theme. It is Search Engine optimized with schema.org microdata especially for blogs.
+Requires at least: 5.3
+Tested up to: 5.8.2
+Requires PHP: 5.6
+Version: 1.0
+License: WTFPL License. 
+License URI: http://sam.zoy.org/wtfpl/
+*/
+
+
+/******************************************************************
+VARIABLES
+******************************************************************/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Arimo&family=Great+Vibes&display=swap');
+
+:root {
+    /* Colors */
+    --site_text_color: #222222;
+    --site_bg_color: #eeeeee;
+    --posts_bgcolor: #faecc9;
+    --sidebar_bgcolor: #D2E4D8;
+    --footer_bgcolor: #CB7E54;
+    --button_bgcolor: #344F59;
+    --button_color: #eeeeee;
+    --link_color: #344F59;
+    --gray: #555555;
+    --light-gray: #cccccc;
+
+    /* Fonts */
+    --font_site_title: "Great Vibes", cursive;
+    --font_main : "Noto Serif", Georgia, serif;
+    --font_button : "Arimo", Arial, sans-serif;
+}
+
+
+/******************************************************************
+GENERAL STYLES
+******************************************************************/
+
+html {
+    background-color: var(--site_bg_color);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+img.show {
+    opacity: 1;
+}
+
+
+/******************************************************************
+TYPOGRAPHY
+******************************************************************/
+
+body {
+    color: var(--site_text_color);
+    font-family: var(--font_main);
+    font-size: 100%;
+    line-height: 1;
+}
+
+
+/* Paragraph styles */
+p:first-child {
+    margin-top: 0;
+}
+  
+p,
+textarea,
+figcaption {
+    line-height: 1.8;
+}
+
+
+/* Link styles */
+a {
+    color: var(--link_color);
+}
+
+
+/* Header styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font_site_title);
+  line-height: 1;
+  margin: 0;
+  max-width: 100%;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  padding-top: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  padding: 0.8em 0 0.6em 0;
+}
+
+h2 {
+  font-size: 2.2em;
+  padding: 1em 0 0.6em 0;
+}
+
+h3 {
+  font-size: 2em;
+  padding: 1em 0 0.6em 0;
+}
+
+h4 {
+  font-size: 1.8em;
+  padding: 1em 0 0.6em 0;
+}
+
+h5 {
+  font-size: 1.7em;
+  padding: 1em 0 0.6em 0;
+}
+
+h6 {
+  font-size: 1.6em;
+  padding: 1em 0 0.6em 0;
+}
+
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+}
+
+table tr {
+      border-bottom: 1px solid var(--light-gray);
+}
+
+table tr:first-child {
+    border-top: 1px solid var(--light-gray);
+}
+  
+table th,
+table td {
+    padding: 0.5em;
+    border-left: 1px solid var(--light-gray);
+    border-right: 1px solid var(--light-gray);
+}
+  
+  
+/* Definiton list styles */
+dl {
+line-height: 1.8;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0.25em 0 1em 1em;
+}
+
+
+/* UL and OL styles */
+ul,
+ol {
+    line-height: 1.5;
+    list-style-position: inside;
+    margin: 1em 0;
+}
+
+li {
+    margin: 0 0 0.5em 0;
+}
+
+li:last-child {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0.5em 0 0 1em;
+}
+
+
+/* Other typographic styles */
+hr {
+    color: var(--gray);
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+blockquote {
+    background: var(--light-gray);
+    border-left: 6px solid var(--footer_bgcolor);    
+    font-style: italic;
+    margin: 0;
+    overflow: hidden;
+    quotes: "" "";
+    padding: 1em 1em 1em 2em;
+}
+
+blockquote cite {
+    display: block;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+blockquote:before,
+blockquote:after {
+    content: "";
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+
+pre {
+    margin: 1em 0;
+    max-width: 300px;
+    overflow: auto;
+    padding: 0 0 0 1em;
+}
+
+code,
+kbd,
+tt,
+var {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code {
+    background: #1b1b1b;
+    color: var(--site_bg_color);
+    display: block;
+    margin: 1em 0;  
+    padding: 0.5em 1em;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted var(--gray);
+    cursor: help;
+}
+
+mark,
+ins {
+    text-decoration: none;
+}
+
+big {
+    font-size: 125%;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
+}
+
+
+/******************************************************************
+MAIN HEADER STYLES
+******************************************************************/
+
+.site-header {
+	box-shadow: 1px 1px 8px rgba(0,0,0,0.5);	
+	display: grid;
+	grid-template-columns: 6fr 2fr;
+	grid-template-areas:
+      "title nav-btn"
+      "desc search-btn";
+    padding: 1em 3vw;
+}
+
+.site-title {
+    grid-area: title;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.site-title a {
+    color: var(--site_text_color);
+    font-family: var(--font_site_title);
+    font-size: 36px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.site-description {
+    align-items: center;
+    color: var(--gray);
+    display: flex;
+    font-style: italic;
+    grid-area: desc;
+    line-height: 1;
+    margin: 0;    
+}
+
+.nav-btn-wrap {
+    align-items: center;
+    display: flex;
+    grid-area: nav-btn;
+    justify-content: flex-end;
+}
+
+.search-toggle-wrap {
+    align-items: center;
+    display: flex;
+    grid-area: search-btn;
+    justify-content: flex-end;
+}
+
+
+/******************************************************************
+NAVIGATION STYLES
+******************************************************************/
+
+/* Main Navigation
+--------------------------------------------- */
+
+.main-nav ul {
+	display: none;
+}
+
+.main-nav {
+	transition: all 1s ease;
+}
+
+.main-nav > ul {
+    background-color: var(--site_bg_color);
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    display: block;
+    height: 100vh;
+    list-style-type: none;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 4em 2em 2em 1em;
+    position: fixed;
+    top: 0;
+    transform: translateX(-150%);
+    transition: all 1s ease;
+    width: 60vw;
+    z-index: 30;
+}
+
+.main-nav.active > ul {
+    transform: translateX(-3vw);
+}	
+
+.main-nav ul {
+    list-style-type: none;
+}
+
+.main-nav .sub-menu {	
+	margin: 0.5em 0 1.5em 0;
+}
+
+.main-nav .sub-menu.toggled-on {
+    display: block;
+}
+
+.main-nav li {
+    margin: 0 0 0.5em 0;
+    padding: 0 0 0.5em 0;
+}
+
+.main-nav li:last-child {
+    margin: 0;
+}
+
+.main-nav li:after {
+    background: var(--gray);
+    background: linear-gradient(to right, var(--gray) 0%, transparent 100%);		  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 6px 0 0 0;
+    width: 100%;    	
+}
+
+.main-nav li.focus > ul {
+    display: block;
+}
+
+.main-nav a {
+    color: var(--site_text_color);
+    font-family: var(--font_button);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main-nav .current-menu-item > a {
+    font-weight: bold;
+}
+
+.main-nav .current-menu-item:after {
+    background-color: var(--site_text_color);  		
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;    	
+}
+
+
+/******************************************************************
+MASONRY LAYOUT STYLES
+******************************************************************/
+
+.home main,
+.archive main,
+.search main {
+    margin: 2em 3vw;
+}
+
+.home main > article,
+.archive main > article,
+.search main > article {
+    background-color: var(--posts_bgcolor);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    margin: 0 0 2em 0;
+    padding: 1.5em;
+}
+
+.home #main > article .entry-footer p,
+.archive #main > article .entry-footer p,
+.search #main > article .entry-footer p {
+    font-size: 0.9em;
+    margin: 0;
+}			
+
+.home #main > article .entry-title,
+.archive #main > article .entry-title,
+.search #main > article .entry-title {
+    font-size: 2.5em;
+    margin: 0;			
+    padding: 0;
+    line-height: 1;
+}
+
+.home #main > article .entry-time,
+.archive #main > article .entry-time,
+.search #main > article .entry-time {
+    font-size: 0.9em;
+}
+
+.archive main > :first-child,
+.search main > :first-child {
+    grid-column: 1 / -1; /* Stretch the headline to fullwidth on Archive and Search Result pages. */
+}
+
+
+/******************************************************************
+SINGLE POST STYLES
+******************************************************************/
+
+body.single main {
+    align-self: start;
+    background-color: var(--posts_bgcolor);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 1.5em 1em;
+    margin: 2em 3vw;	
+}
+
+body.single .hentry {
+    padding: 0 0 1em 0;
+    position: relative;		
+}
+
+body.single .entry-date {
+    background-color: var(--footer_bgcolor);
+    left: -1.5em;
+    margin: 0;
+    padding: 0.5em 1em;
+    position: absolute;		
+    top: 0; 
+}
+
+body.single .entry-title {
+    padding: 2em 0 0.3em 0;
+    margin: 0 0 1em 0;
+}
+
+body.single .entry-title:after {
+    background: var(--gray);
+    background: linear-gradient(to right, var(--gray) 0%, var(--site_bg_color) 100%);		  		
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;    	
+}
+
+
+/******************************************************************
+PAGE STYLES
+******************************************************************/
+
+body.page main {
+    align-self: start;
+    background-color: var(--posts_bgcolor);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 1.5em 1em;
+    margin: 2em 3vw;
+}
+
+body.page .hentry {
+    padding: 0 0 1em 0;
+}	
+
+body.page .entry-title:after {
+    background: var(--gray);
+    background: linear-gradient(to right, var(--gray) 0%, var(--site_bg_color) 100%);		  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0.75em 0 0 0;
+    width: 100%;    	
+}
+
+
+/******************************************************************
+POSTS PAGINATION STYLES
+******************************************************************/
+
+.pagination {
+	font-size: 1.2em;
+	margin: 1em 0 3em 0;
+	padding: 0 1em;
+}
+
+.pagination .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination .page-numbers {
+	margin: 0 0.5em;
+}
+
+.pagination .current {
+    border: 2px solid var(--site_text_color);
+    border-radius: 50%;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.pagination a {
+    font-family: var(--font_button);
+    text-decoration: none;
+}
+
+
+.post-navigation {
+	border-top: 1px solid var(--gray);
+	border-bottom: 1px solid var(--gray);	
+	font-size: 1.2em;
+	padding: 0.5em 0;
+}
+
+.post-navigation .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-navigation .nav-links .nav-title {
+    display: flex;
+}
+
+.post-navigation .nav-links .nav-next {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5em 0 0 0;		
+    width: 100%;
+}
+
+
+/******************************************************************
+COMMENTS STYLES
+******************************************************************/
+
+#commentlist {
+	margin: 3em 0 0 0;
+}
+
+#commentlist .comments-title {
+    border-bottom: 1px solid var(--gray);
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0 0 0.5em 0;
+    text-align: center;
+}
+
+#commentlist article {
+    border-bottom: 1px solid var(--gray);
+    margin: 0 0 2em 0;
+    padding: 0 0 1em 0;
+    position: relative;
+}
+
+#commentlist article header,
+#commentlist article section {
+    padding: 0;
+}
+
+#commentlist article section {
+    margin: 1em 0 0 0;
+}
+
+#commentlist article .comment-reply-link {
+    padding: 0.5em 1em;		
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#commentlist article p:first.child {
+    margin-top: 0;
+}
+
+#commentlist article p:last-child {
+    margin-bottom: 0;
+}
+
+#commentlist article cite {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#commentlist article time {
+    display: block;
+    font-size: 0.9em;
+    margin: 0.5em 0 0 0;
+}
+
+#commentlist .children {
+    margin: 0;
+    padding: 0 0 0 1em;
+}
+
+.comment-respond {
+	margin: 1.5em 0 0 0;
+}
+
+.comment-respond .comment-reply-title {
+    font-size: 1.5em;
+}
+
+.comment-respond label {
+    display: block;
+}
+
+.comment-respond input {
+    border: 1px solid var(--gray);
+    border-radius: 0;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.comment-respond textarea {
+    border: 1px solid var(--gray);
+    border-radius: 0;
+    height: 10em;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.comment-respond #cookies {
+    display: inline;
+    margin: 0 0.5em 0 0;
+    width: 44px;
+    height: 44px;
+}
+
+.comment-respond .cookie-notification {
+    display: flex;
+}
+
+.comment-respond .cookies-label {
+    display: inline;
+}
+
+
+/******************************************************************
+SIDEBAR STYLES
+******************************************************************/
+
+aside {
+	align-self: start;	
+	background-color: var(--sidebar_bgcolor);	
+	border-radius: 2px;
+	color: var(--site_text_color);
+	display: flex;
+	flex-flow: column;
+	grid-area: sidebar;	
+	margin: 0 16px 32px 16px;
+	padding: 16px;
+}
+
+aside > section {
+    padding: 0;
+    margin: 0 0 48px 0;
+    max-width: 25em;
+}
+
+aside a {
+    color: var(--site_text_color);
+}
+
+aside ol,
+aside ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+aside ul {
+    list-style-type: disc;
+}
+
+aside ul li,
+aside ol li {
+	margin: 0 0 0.5em 0;
+}
+
+aside ul li:last-child,
+aside ol li:last-child {
+    margin: 0;
+}
+
+aside h2 {
+    font-size: 2em;		
+    margin: 0 0 8px 0;
+    padding: 0 0 8px 0;
+}
+
+aside h2:after {
+    background: var(--gray);
+    background: linear-gradient(to right, var(--gray) 0%, transparent 100%);		  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 6px 0 0 0;
+    width: 100%;
+}
+
+/* Recent Comments widget styles */
+aside .widget_recent_comments {
+    font-weight: 700;
+}
+
+aside .widget_recent_comments .comment-author-link {
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Tag Cloud widget styles */
+aside .widget_tag_cloud {
+    line-height: 1.5;
+}
+
+aside .widget_tag_cloud	.tag-cloud-link {
+	margin: 0 16px 0 0;
+}
+
+
+/******************************************************************
+SEARCH FORM STYLES
+******************************************************************/
+
+.searchform {
+	display: flex;
+	max-width: 100%;
+}
+
+.searchform	input {
+    border-radius: 0;
+    max-width: 100%;
+    padding: 0 0.5em;
+    -webkit-appearance: none;		
+}
+
+.site-header .searchform {
+    position: fixed;		
+    right: 0;
+    top: 0;	
+    transform: translateY(-40em);
+    transition: all 0.5s ease;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    height: 15em;
+    z-index: 100;		
+}
+
+.site-header .searchform.active {
+    opacity: 1;
+    transform: translateY(0);			
+    transition: all 0.5s ease;
+}
+
+.site-header .searchform input {
+    height: 2em;
+    width: 70vw;
+}
+
+.searchform-open .site-header .search-toggle {
+    background-color: transparent;
+    position: fixed;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid red;
+    border-radius: 100%;
+    font-size: 2em;
+    transform: none;
+    top: 3vw;
+    right: 3vw;
+    z-index: 110;
+}
+
+
+/******************************************************************
+POST THUMBNAIL STYLES
+******************************************************************/
+
+.post-thumbnail {
+	display: block;	
+	position: relative;
+}
+
+.post-thumbnail img {
+    background: linear-gradient(#344F59, #648C8C);		
+    border-radius: 0 160px 160px 160px;
+    height: auto;		
+    max-width: 100%;
+    padding: 5px;
+}
+
+
+/******************************************************************
+FOOTER STYLES
+******************************************************************/
+
+.site-footer {
+	background-color: var(--footer_bgcolor);
+    padding: 1em 3vw;
+}
+
+.site-footer p {
+    text-align: center;
+    margin: 0;
+}
+
+
+/******************************************************************
+BUTTONS
+******************************************************************/
+
+/* Example button defaults */
+button {
+    background-color: var(--button_bgcolor);
+    border: none;
+    border-radius: 0;
+    color: var(--button_color);
+    cursor: pointer;
+    font-family: var(--font_button);
+    letter-spacing: 1px;
+    outline: 0;
+    padding: 0.5em;
+    position: relative;
+    text-decoration: none;
+}
+
+
+/* Example button defaults */
+.nav-button {
+    background: none;
+    border: none;
+    border-radius: 0;    
+    color: var(--site_text_color);
+    cursor: pointer;
+    font-family: var(--font_button);
+    letter-spacing: 1px;
+    outline: 0; 
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    top: 10px;  
+}
+
+.nav-button:before {
+    background: var(--site_text_color);    
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    margin: 0 0 0 -20px;
+    position: absolute; 
+    top: -10px;      
+    transition: all .3s ease-out;
+    width: 40px;     
+}
+    
+.nav-button:after {
+    background: var(--site_text_color);     
+    content: "";
+    display: block;     
+    height: 4px;
+    left: 50%;
+    margin: 0 0 0 -20px;
+    position: absolute;
+    top: -20px;    
+    transition: all .3s ease-out;
+    width: 40px;     
+}
+
+  
+.nav-button.close:before {
+    background: red;
+    margin: 0 0 0 -13px;
+    top: -15px;        
+    transform: rotate(45deg); 
+    width: 25px; 
+}
+  
+.nav-button.close:after {
+    background: red;
+    margin: 0 0 0 -13px;
+    top: -15px;        
+    transform: rotate(-45deg); 
+    width: 25px; 
+}
+  
+  
+
+/* Read More Button */
+.read-more {
+    background-color: var(--button_bgcolor);
+    border: none;
+	border-radius: 1px 0.5em 1px 0.5em;
+    box-sizing: border-box;
+    color: var(--button_color);
+    cursor: pointer;
+    font-family: var(--font_button);
+    letter-spacing: 1px;
+    outline: 0;
+    padding: 0.5em;
+    position: relative;
+    text-decoration: none;
+}
+
+
+/* Search Toggle Button */
+.search-toggle {
+	background: none;
+    color: var(--site_text_color);
+    font-size: 2em;
+	padding: 0;
+    transform: rotate(-45deg);
+}
+
+.searchsubmit {
+    align-items: center;    
+    display: flex;
+    height: 2em;
+    padding: 0 0.5em;
+}
+
+.search-glass {
+  display: block;
+  font-size: 1.5em;
+  transform: rotate(-45deg);
+}
+
+/* Dropdown Menu Toggle Button */
+.dropdown-toggle {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: var(--site_text_color);
+    cursor: pointer;
+    font-family: var(--font_button);
+    font-weight: bold;  
+    margin: 0 0 0 1em;
+    outline: 0; 
+    padding: 0;
+    position: relative;
+    transform: scale(1.5);
+    text-decoration: none; 
+}
+
+
+/* Comment Form Submit Button */
+.comment-form .submit {
+    background-color: var(--button_bgcolor);
+    border: none;
+    border-radius: 0;
+    color: var(--button_color);
+    cursor: pointer;
+    display: block;    
+    font-family: var(--font_button);
+    letter-spacing: 1px;
+    margin: 0 auto;    
+    outline: 0;
+    padding: 0.5em 1em;  
+    position: relative;
+    text-decoration: none;
+    width: auto;
+}
+
+
+/******************************************************************
+MEDIA QUERIES
+******************************************************************/
+
+/* Styles for 768px and larger screen sizes */
+@media only screen and (min-width: 768px) {
+
+    /******************************************************************
+    TYPOGRAPHY
+    ******************************************************************/
+
+    pre {
+        max-width: 480px;
+    }
+
+
+    /******************************************************************
+    MAIN HEADER STYLES
+    ******************************************************************/
+
+    .site-header {
+        align-items: center;	
+        display: grid;
+        grid-template-columns: 2fr 5fr 3em;
+        grid-template-areas:
+        "title nav search-btn"
+        "desc desc desc";
+        padding: 1em 3vw;  
+    }
+
+
+    /******************************************************************
+    NAVIGATION STYLES
+    ******************************************************************/
+
+    .nav-button {
+        display: none;
+    }
+
+    .main-nav {
+        grid-area: nav;
+    }
+
+    .main-nav > ul {
+        background-color: transparent;
+        box-shadow: none;
+        height: auto; 		
+        list-style: none;
+        margin: 0;
+        overflow-y: unset;		
+        padding: 0;
+        position: relative;
+        text-align: center;
+        transform: translateX(0);
+        transition: none;
+        width: 100%;
+    }
+
+    .main-nav > ul > li {
+        margin: 0 1em 0 0;
+        padding: 0;			
+    }
+    
+    .main-nav > ul ul {
+        background-color: var(--light-gray);
+        left: -999em;	  	
+        list-style: none;	  	
+        min-width: 180px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: -999em;
+        z-index: 30;
+    }
+
+    .main-nav > ul ul .sub-menu {
+        background-color: #ddd;
+    }
+
+    .main-nav > ul ul .sub-menu:before {
+        border: 8px solid transparent;
+        border-left-color: transparent;
+        border-left-style: solid;
+        border-left-width: 8px;
+        border-right-color: transparent;
+        border-left: 0;
+        border-right-color: #ddd;	    		
+        content: "";
+        height: 0;
+        left: -8px;			    			    
+        position: absolute;
+        top: 16px;
+        width: 0;			    
+    }   	
+
+    .main-nav > ul .sub-menu {
+        margin: 0;
+    }
+
+    .main-nav > ul .sub-menu:before {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        left: 16px;
+        top: -8px;
+        border: 8px solid transparent;
+        border-top-color: transparent;
+        border-top-style: solid;
+        border-top-width: 8px;
+        border-bottom-color: transparent;
+        border-top: 0;
+        border-bottom-color: var(--light-gray);
+    }
+    
+    .main-nav li {
+        display: inline-block;
+        position: relative;
+        text-align: left; /* Reset text alignment */
+    }
+
+    .main-nav li:after {
+        background: none;
+        background-color: var(--site_text_color);    		
+        content: "";
+        display: block;
+        height: 2px;
+        margin: 0;
+        transition: width 0.5s ease;
+        width: 0;	    	
+    }
+
+    .main-nav li:hover:after {
+        width: 100%;
+    }
+
+    .main-nav li > ul {
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    .main-nav li > ul.toggled-on {
+        top: 26px;
+        left: auto;
+        opacity: 1;        	
+    }
+
+    .main-nav li:hover > ul,
+    .main-nav li.focus > ul {
+        top: 26px;
+        left: auto;
+        opacity: 1;
+    }
+        
+    .main-nav li li {
+        border-bottom: 1px solid #888888;
+        display: block;
+        padding: 0 8px;
+    }
+
+    .main-nav li li:first-child {
+        padding: 8px 8px 0 8px;
+    }
+
+    .main-nav li li:last-child {
+        padding: 0 8px 8px 8px;
+    }
+
+    .main-nav li li > ul.toggled-on {
+        left: 100%;
+        top: 0;      	
+    }
+
+    .main-nav li li:hover > ul,
+    .main-nav li li.focus > ul{
+        left: 100%;
+        top: 0;
+    }
+
+    .main-nav .dropdown-toggle {
+        margin: 0 0 0 4px;
+    }
+
+
+    /******************************************************************
+    MASONRY LAYOUT STYLES
+    ******************************************************************/
+
+    .home #main,
+    .archive #main,
+    .search #main {
+        align-self: start;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(Min(20em, 100%), 1fr));
+        grid-template-rows: masonry;
+        grid-gap: 3vw;
+        justify-content: center;
+        margin: 2em 3vw;
+    }
+
+    .home #main article,
+    .archive #main article,
+    .search #main article {
+        align-self: start;
+        margin: 0;
+    }
+
+    .home #main article .post-thumbnail,
+    .archive #main article .post-thumbnail,
+    .search #main article .post-thumbnail {
+        margin: 0 0 1em 0;
+    }
+
+    .home #main article .entry-meta,
+    .archive #main article .entry-meta,
+    .search #main article .entry-meta {
+        margin: 0 0 1em 0;
+    }
+
+
+    /******************************************************************
+    SINGLE POST STYLES
+    ******************************************************************/
+    
+    body.single main article {
+        max-width: 75ch;
+    }
+
+
+    /******************************************************************
+    PAGE STYLES
+    ******************************************************************/
+
+    body.page main article {
+        max-width: 75ch;
+    }
+
+
+    /******************************************************************
+    POSTS PAGINATION STYLES
+    ******************************************************************/
+
+    .post-navigation .nav-links .nav-next {
+        justify-content: normal;
+        margin: 0;		
+        width: auto;
+    }    
+
+    /******************************************************************
+    SIDEBAR STYLES
+    ******************************************************************/
+
+    aside {
+        flex-flow: row;
+        flex-wrap: wrap;
+        padding: 1em;
+    }
+
+    aside section {
+        padding: 0 0 0 1.5em;		
+        width: 50%;
+    }
+
+    aside section:nth-child(odd) {
+        padding: 0 1.5em 0 0;
+    }
+
+    aside section > li {
+        margin-right: 3em;
+    }
+
+    aside section > li:first-child {
+        margin-top: 0;
+    }	
+
+    /******************************************************************
+    SEARCH FORM STYLES
+    ******************************************************************/
+
+    .site-header .searchform input {
+        height: 2em;
+        width: 20em;
+    }
+
+}
+/* End of 768px Media Query */
+
+
+/* Styles for 1024px and larger screen sizes */
+@media only screen and (min-width: 1024px) {
+
+    /******************************************************************
+    TYPOGRAPHY
+    ******************************************************************/
+
+    pre {
+        max-width: 75ch;
+    }
+
+
+    /******************************************************************
+    MAIN LAYOUT STYLES
+    ******************************************************************/
+
+    body {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "header header"
+            "main sidebar"
+            "pagenavi ..."
+            "footer footer";
+    }
+
+    .site-header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: sidebar;
+        margin: 2em 3vw;
+    }
+
+    .site-footer {
+        grid-area: footer;
+    }
+
+
+    /******************************************************************
+    SIDEBAR STYLES
+    ******************************************************************/
+
+    aside {
+        flex-flow: column;
+    }
+
+    aside section {
+        padding: 0;	
+        width: auto;
+    }
+
+    aside section:nth-child(odd) {
+        padding: 0;
+    }
+
+
+    /******************************************************************
+    COMMENTS STYLES
+    ******************************************************************/
+
+    .comment-respond {
+        width: 60%;
+    }    
+
+}
+/* End of 1024px Media Query */

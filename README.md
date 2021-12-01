@@ -28,10 +28,12 @@ Activating a demo is very simple. Below are the instructions how to do it:
 
 2. Install Theme Unit Test data to your WordPress. Instructions can be found here: https://codex.wordpress.org/Theme_Unit_Test
 
-3. Uncomment the below lines in Molde Starter Theme <strong>functions.php</strong> file to activate the demo. Remember to uncomment only one demo stylesheet and script. Change the "demo1" in the lines to a corresponding demo for example "demo2". All demos can be found in the <strong>demos</strong> folder.
+3. Clone the Molde Starter Theme folder and files to your WordPress installation <strong>wp-content/themes/</strong> folder and activate the theme in the WordPress admin panel.
+
+4. Uncomment the below lines in Molde Starter Theme <strong>functions.php</strong> file to activate the demo. Remember to uncomment only one demo stylesheet and script. Change the "demo1" in the lines to a corresponding demo for example "demo2". All demos can be found in the <strong>demos</strong> folder.
 - <code>wp_register_style( 'demo1-stylesheet', get_stylesheet_directory_uri() . '/demos/demo1/style.css', array(), '', 'all' );</code>
 - <code>wp_register_script( 'demo1-js', get_stylesheet_directory_uri() . '/demos/demo1/scripts.js', array(), '', true );</code>
 - <code>wp_enqueue_style( 'demo1-stylesheet' );</code>
 - <code>wp_enqueue_script( 'demo1-js' );</code>
 
-4. That's it, you're all set! Open your site in the browser to see the demo.
+5. That's it, you're all set! Open your site in the browser to see the demo.

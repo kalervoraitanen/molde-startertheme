@@ -3,7 +3,7 @@ Theme name: Molde Starter Theme - Demo1
 
 This demo theme is designed especially for blogs. It is also WTFPL licensed so you can use it anyway you want. However you are forbidden to hold me liable for anything if you choose to use it.
 
-Activating a demo is very simple. Below are the instructions how to do it:
+Activating the demo is very simple. Below are the instructions how to do it:
 
 1. Install WordPress to a local or remote server. Instructions can be found here: https://wordpress.org/support/article/how-to-install-wordpress/
 

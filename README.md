@@ -16,3 +16,20 @@ http://www.kalervoraitanen.com
 
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
+
+# Activating a demo
+Molde comes with demo themes to showcase what can be done with just CSS and a touch of Vanilla Javascript. All the demos are also WTFPL licensed so you can use them anyway you want. However you are forbidden to hold me liable for anything if you choose to use them.
+
+Activating a demo is very simple. Below are the instructions how to do it:
+
+1. Install WordPress to a local or remote server. Instructions can be found here: https://wordpress.org/support/article/how-to-install-wordpress/
+
+2. Install Theme Unit Test data to your WordPress. Instructions can be found here: https://codex.wordpress.org/Theme_Unit_Test
+
+3. Uncomment the below lines in Molde Starter Theme <strong>functions.php</strong> file to activate the demo. Remeber to uncomment only one demo stylesheet and script.
+- <code>wp_register_style( 'demo1-stylesheet', get_stylesheet_directory_uri() . '/demos/demo1/style.css', array(), '', 'all' );</code>
+- <code>wp_register_script( 'demo1-js', get_stylesheet_directory_uri() . '/demos/demo1/scripts.js', array(), '', true );</code>
+- <code>wp_enqueue_style( 'demo1-stylesheet' );</code>
+- <code>wp_enqueue_script( 'demo1-js' );</code>
+
+4. That's it, you're all set! Open your site in the browser to see the demo.

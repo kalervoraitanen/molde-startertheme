@@ -19,7 +19,7 @@ License URI: http://sam.zoy.org/wtfpl/
 
 If you would like to support this theme and my work you can buy me a coffee :) <a href="https://www.buymeacoffee.com/kalervoraitanen" target="_blank">Buy me a coffee &raquo;</a>
 
-# Activating a demo
+<h2>Activating a demo</h2>
 Molde comes with demo themes to showcase what can be done with just CSS and a touch of Vanilla Javascript. All the demos are also WTFPL licensed so you can use them anyway you want. However you are forbidden to hold me liable for anything if you choose to use them.
 
 Activating a demo is very simple. Below are the instructions how to do it:

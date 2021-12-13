@@ -1243,6 +1243,7 @@ button {
 
     .main-nav li:hover > ul,
     .main-nav li.focus > ul {
+        display: block;
         top: 26px;
         left: auto;
         opacity: 1;

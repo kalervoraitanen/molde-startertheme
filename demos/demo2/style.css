@@ -1329,16 +1329,17 @@ button {
     }
 
     .main-nav li > ul.toggled-on {
-        top: 26px;
         left: auto;
-        opacity: 1;        	
+        opacity: 1;
+        top: 26px;               	
     }
 
     .main-nav li:hover > ul,
     .main-nav li.focus > ul {
-        top: 26px;
+        display: block;
         left: auto;
         opacity: 1;
+        top: 26px;        
     }
         
     .main-nav li li {

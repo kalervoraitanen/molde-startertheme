@@ -1362,6 +1362,10 @@ button {
         width: 100%;
     }
 
+    .main-nav li:last-child:after {
+        display: block;
+    }
+
     .main-nav li.current-menu-item:after {
         background: var(--brown);
     }    

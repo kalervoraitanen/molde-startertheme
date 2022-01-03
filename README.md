@@ -23,7 +23,7 @@ If you would like to support this theme and my work you can buy me a coffee :) <
 
 <h2>Getting Started</h2>
 <p>This theme uses Gulp and Sass to minify and autoprefix styles and scripts etc. If you would like to use normal CSS instead you can
-modify the <strong>style.min.css</strong> in the <strong>/assets/css/</strong> folder.
+modify the <strong>style.min.css</strong> in the <strong>/assets/css/</strong> folder.</p>
 <p>To get started with Gulp and Sass you should have Node and npm installed. After that follow these steps:</p>
 <ul>
 <li>Clone the Molde repository to a folder in your computer.</li>

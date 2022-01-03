@@ -1,7 +1,7 @@
 # Molde
 A lightweight WordPress Development Theme
 
-<strong>Version: 2.1.</strongS>
+<strong>Version: 2.1.</strong>
 
 Molde is designed to give a strong semantic and lightweight foundation to a theme.
 It is highly Search Engine optimized especially for blogs and it scores by default 90 in SEO in Google's Lighthouse audit.

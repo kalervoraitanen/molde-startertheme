@@ -7,6 +7,7 @@
 - Did some changes to Demo #2 single post and page layouts.
 - Changed from Grunt to Gulp since it's more up to date.
 - Added a function to preconnect to Google Fonts to improve performance.
+- Added a new demo #4.
 
 /* 2.0 update */
 - Added new functionality to add dropdown buttons to all menuitems with submenus.

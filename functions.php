@@ -215,7 +215,8 @@ function molde_scripts_and_styles() {
     // wp_register_style( 'demo1-stylesheet', get_stylesheet_directory_uri() . '/demos/demo1/style.css', array(), '', 'all' );    
     // wp_register_style( 'demo2-stylesheet', get_stylesheet_directory_uri() . '/demos/demo2/style.css', array(), '', 'all' ); 
     // wp_register_style( 'demo3-stylesheet', get_stylesheet_directory_uri() . '/demos/demo3/style.css', array(), '', 'all' );    
-
+    // wp_register_style( 'demo4-stylesheet', get_stylesheet_directory_uri() . '/demos/demo4/style.css', array(), '', 'all' );    
+    
     // Adding scripts file in the footer
     wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array(), '', true );
 
@@ -226,7 +227,7 @@ function molde_scripts_and_styles() {
     // wp_register_script( 'demo1-js', get_stylesheet_directory_uri() . '/demos/demo1/scripts.js', array(), '', true );
     // wp_register_script( 'demo2-js', get_stylesheet_directory_uri() . '/demos/demo2/scripts.js', array(), '', true );
     // wp_register_script( 'demo3-js', get_stylesheet_directory_uri() . '/demos/demo3/scripts.js', array(), '', true );
-
+    // wp_register_script( 'demo4-js', get_stylesheet_directory_uri() . '/demos/demo4/scripts.js', array(), '', true );
 
     // Enqueue main stylesheet
     wp_enqueue_style( 'molde-stylesheet' );
@@ -235,6 +236,7 @@ function molde_scripts_and_styles() {
     // wp_enqueue_style( 'demo1-stylesheet' );
     // wp_enqueue_style( 'demo2-stylesheet' );
     // wp_enqueue_style( 'demo3-stylesheet' );
+    // wp_enqueue_style( 'demo4-stylesheet' );
 
     // Uncomment the below line to enable Modernizr
     //wp_enqueue_script( 'modernizr' );
@@ -248,6 +250,7 @@ function molde_scripts_and_styles() {
     // wp_enqueue_script( 'demo1-js' );
     // wp_enqueue_script( 'demo2-js' );
     // wp_enqueue_script( 'demo3-js' );
+    // wp_enqueue_script( 'demo4-js' );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
       wp_enqueue_script( 'comment-reply' );

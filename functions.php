@@ -135,6 +135,20 @@ function molde_javascript_detection() {
 }
 add_action( 'wp_head', 'molde_javascript_detection', 0 );
 
+/**
+ * Preconnects to Google Fonts to improve performance. Uncomment this function if you're using Google Fonts.
+ */
+/*
+if ( ! function_exists( 'molde_preconnect_googlefonts' ) ) {
+
+	function molde_preconnect_googlefonts() {
+		?>
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+		<?php
+	}
+}
+add_action( 'wp_head', 'molde_preconnect_googlefonts' );
+*/
 
 function filter_ptags_on_images($content){
   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
@@ -203,7 +217,7 @@ function molde_scripts_and_styles() {
     // wp_register_style( 'demo3-stylesheet', get_stylesheet_directory_uri() . '/demos/demo3/style.css', array(), '', 'all' );    
 
     // Adding scripts file in the footer
-    wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array(), '', true );
+    wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array(), '', true );
 
     // Or uncomment the below line to use jQuery in your scripts
     // wp_register_script( 'molde-js', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );

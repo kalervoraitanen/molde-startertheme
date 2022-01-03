@@ -14,6 +14,15 @@
 		?>
 
 		<?php wp_link_pages(); ?>
+
+		<?php
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'molde-theme' ) . '</span><span class="prev-post-icon">&larr; </span><span class="post-nav-title">%title</span>',
+					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'molde-theme' ) . '</span><span class="post-nav-title">%title</span><span class="prev-post-icon"> &rarr;</span>',
+				)
+			);
+		?>		
 	  
 	  <?php
 	  // If comments are open or there is at least one comment, load up the comment template.

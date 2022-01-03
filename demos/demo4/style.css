@@ -1,0 +1,1762 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Molde Starter Theme - Demo4
+Theme URI: https://github.com/kalervoraitanen/molde-startertheme
+Author: Kalervo Raitanen
+Author URI: http://www.kalervoraitanen.com
+Description: Molde Starter Theme - Demo4 is a minimalist and animated blogging theme.
+Requires at least: 5.3
+Tested up to: 5.8.2
+Requires PHP: 5.6
+Version: 1.0
+License: WTFPL License. 
+License URI: http://sam.zoy.org/wtfpl/
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# 1. VARIABLES
+# 2. GENERAL STYLES
+# 3. TYPOGRAPHY
+	# 3.1. Paragraph styles
+	# 3.2. Link styles
+    # 3.3. Header styles
+    # 3.4. Table styles
+    # 3.5. Definiton list styles
+    # 3.6. UL and OL styles
+    # 3.7. Other typographic styles
+# 4. MAIN HEADER STYLES
+# 5. NAVIGATION STYLES
+# 6. MAIN CONTENT LAYOUT STYLES
+# 7. SINGLE POST STYLES
+# 8. PAGE STYLES
+# 9. POSTS PAGINATION STYLES
+# 10. COMMENTS STYLES
+# 11. SIDEBAR STYLES
+# 12. SEARCH FORM STYLES
+# 13. POST THUMBNAIL STYLES
+# 14. FOOTER STYLES
+# 15. BUTTONS
+# 16. BUTTONS
+# 17. MEDIA QUERIES
+    # 17.1. Styles for 768px and larger screen sizes
+        # 17.1.1. Typography
+        # 17.1.2. Main header styles
+        # 17.1.3. Navigation styles
+        # 17.1.4. Main content layout styles
+        # 17.1.5. Single post styles
+        # 17.1.6. Page styles
+        # 17.1.7. Posts pagination styles
+        # 17.1.8. Sidebar styles
+        # 17.1.9. Search form styles
+        # 17.1.10. Comments styles
+    # 17.2. Styles for 1024px and larger screen sizes
+        # 17.2.1. Typography
+        # 17.2.2. Main layout styles
+        # 17.2.3. Main content layout styles
+        # 17.2.4. Single post styles
+        # 17.2.5. Page styles
+        # 17.2.6. Sidebar styles
+--------------------------------------------------------------*/
+
+
+/******************************************************************
+1. VARIABLES
+******************************************************************/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppinsfamily=Arimo&family=Lora&display=swap');
+
+:root {
+    /* Colors */
+    --button_bgcolor: #134347;
+    --button_color: #eeeeee;
+    --white: #eeeeee;
+    --black: #111111;
+    --gray: #555555;
+    --green: #134347;
+    --light-gray: #bbbbbb;
+    --light-green: #bdd6c7;
+    --site_text_color: #325050;
+
+    /* Fonts */
+    --font-heading: 'Poppins', Arial, sans-serif;
+    --font_main: 'Lora', Arial, sans-serif;
+    --font_button: "Arimo", Arial, sans-serif;
+}
+
+
+/******************************************************************
+2. GENERAL STYLES
+******************************************************************/
+
+html {
+    background: var(--white);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    opacity: 0;
+    transition: opacity 1.5s ease-out, clip-path 0.25s ease-out;
+    clip-path: inset(45% 20% 45% 20%);
+}
+
+img.show {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+}
+
+
+/******************************************************************
+3. TYPOGRAPHY
+******************************************************************/
+
+body {
+    color: var(--site_text_color);
+    font-family: var(--font_main);
+    font-size: 100%;
+    line-height: 1;
+    position: relative;    
+}
+
+
+/* 3.1. Paragraph styles */
+p:first-child {
+    margin-top: 0;
+}
+  
+p,
+textarea,
+figcaption {
+    line-height: 1.8;
+}
+
+
+/* 3.2. Link styles */
+a {
+    color: var(--green);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* 3.3. Header styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  max-width: 100%;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  padding-top: 0;
+}
+
+h1 {
+  font-size: 2.2em;
+  padding: 0.8em 0 0.6em 0;
+}
+
+h2 {
+  font-size: 2.0em;
+  padding: 1em 0 0.6em 0;
+}
+
+h3 {
+  font-size: 1.8em;
+  padding: 1em 0 0.6em 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  padding: 1em 0 0.6em 0;
+}
+
+h5 {
+  font-size: 1.3em;
+  padding: 1em 0 0.6em 0;
+}
+
+h6 {
+  font-size: 1.2em;
+  padding: 1em 0 0.6em 0;
+}
+
+
+/* 3.4. Table styles */
+table {
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+table tr:first-child {
+    border-top: 1px solid var(--light-gray);
+}
+  
+table th,
+table td {
+    border-left: 1px solid var(--light-gray);
+    border-right: 1px solid var(--light-gray);
+    padding: 0.5em;
+}
+  
+  
+/* 3.5. Definiton list styles */
+dl {
+    line-height: 1.8;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0.25em 0 1em 1em;
+}
+
+
+/* 3.6. UL and OL styles */
+ul,
+ol {
+    line-height: 1.5;
+    list-style-position: inside;
+    margin: 1em 0;
+}
+
+li {
+    margin: 0 0 0.5em 0;
+}
+
+li:last-child {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0.5em 0 0 1em;
+}
+
+
+/* 3.7. Other typographic styles */
+hr {
+    color: var(--gray);
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+blockquote {
+    background: var(--light-gray);
+    border-left: 6px solid var(--gray);
+    color: var(--black);  
+    font-style: italic;
+    margin: 0;
+    overflow: hidden;
+    quotes: "" "";
+    padding: 1em 1em 1em 2em;
+}
+
+blockquote cite {
+    display: block;
+    font-weight: 700;
+    margin-top: 0.5em;
+}
+
+blockquote:before,
+blockquote:after {
+    content: "";
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+
+pre {
+    margin: 1em 0;
+    max-width: 300px;
+    overflow: auto;
+    padding: 0 0 0 1em;
+}
+
+code,
+kbd,
+tt,
+var {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code {
+    background: #1b1b1b;
+    color: var(--white);
+    display: block;
+    margin: 1em 0;  
+    padding: 0.5em 1em;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted var(--gray);
+    cursor: help;
+}
+
+mark,
+ins {
+    text-decoration: none;
+}
+
+big {
+    font-size: 125%;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
+}
+
+
+/******************************************************************
+4. MAIN HEADER STYLES
+******************************************************************/
+
+.site-header {
+    --c : var(--green);
+    --t : transparent;    
+
+    background-image:
+    repeating-linear-gradient(45deg, var(--c) 0, var(--c) 20px, var(--t) 20px, var(--t) 32px, var(--c) 32px, var(--c) 44px, var(--t) 44px, var(--t) 56px, var(--c) 56px, var(--c) 68px, var(--t) 68px, var(--t) 80px, var(--c) 0),
+    repeating-linear-gradient(-45deg, var(--c) 0, var(--c) 20px, var(--t) 20px, var(--t) 32px, var(--c) 32px, var(--c) 44px, var(--t) 44px, var(--t) 56px, var(--c) 56px, var(--c) 68px, var(--t) 68px, var(--t) 80px, var(--c) 0),
+    linear-gradient(to bottom right, #064f5e, #275f5d);    
+    /* background: linear-gradient(135deg, #064f5e 0%,#275f5d 100%); */
+    padding: 6em 0 1em 0;
+}
+
+.site-title {
+    color: var(--brown);
+    font-size: 32px;
+    grid-area: title;
+    line-height: 1;    
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.site-title a {
+    color: var(--white);
+    font-family: var(--font_site_title);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.site-description {
+    color: var(--light-gray);
+    font-size: 1.2em;
+    grid-area: desc;
+    line-height: 1;
+    margin: 0.5em 0 0 0;
+    text-align: center;
+}
+
+.nav-btn-wrap {
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+    background: var(--green);
+    padding: calc(0.5em + 12px) 0.5em;
+    z-index: 120;
+}
+
+.search-toggle-wrap {
+    display: none;
+}
+
+
+/******************************************************************
+5. NAVIGATION STYLES
+******************************************************************/
+
+.main-nav {
+	display: none;
+}
+
+.main-nav.active {
+    align-items: center;
+    background: rgba(0,0,0,0.9);
+    bottom: 0;
+    display: grid;
+    justify-content: center;
+    left: 0;
+    overflow-y: scroll;
+    padding: 2em 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    -webkit-animation: openLightbox .5s forwards ease-out;
+    animation: openLightbox .5s forwards ease-out;
+    transform: scale(0.1);
+    opacity: 0;    
+}
+
+.main-nav ul {
+    list-style-type: none;
+}
+
+.main-nav > ul {
+    width: 70vw;
+    padding: 0;   
+}
+
+.main-nav.active > ul {
+    -webkit-animation: fadeInMenu .5s forwards ease-out 0.5s;
+    animation: fadeInMenu .5s forwards ease-out 0.5s;
+    opacity: 0;
+}
+
+.main-nav ul ul,
+.main-nav ul ul ul {
+    display: none;
+}
+
+.main-nav ul ul.toggled-on,
+.main-nav ul ul ul.toggled-on {
+    display: block;
+}
+
+.main-nav li {
+    position: relative;
+    padding: 0 0 4px 0;
+}
+
+.main-nav li:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--light-gray);
+}
+
+.main-nav li:last-child:after {
+    display: none;
+}
+
+.main-nav li.current-menu-item:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--site_text_color);
+    top: 2px;
+}
+
+.main-nav a {
+    color: var(--white);
+    font-family: var(--font_button);
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main-nav ul ul a {
+    font-size: 1.3em;
+}
+
+.main-nav ul ul ul a {
+    font-size: 1.2em;
+}
+
+
+/******************************************************************
+6. MAIN CONTENT LAYOUT STYLES
+******************************************************************/
+
+.home #main > article,
+.archive #main > article,
+.search #main > article {
+    margin: 0;
+    padding: 6vw;
+}
+
+.home #main > article:nth-child(odd),
+.archive #main > article:nth-child(odd),
+.search #main > article:nth-child(odd) {
+    background: linear-gradient(90deg, var(--white) 0%, #dddddd 100%);
+}
+
+.home #main > article:nth-child(even),
+.archive #main > article:nth-child(even),
+.search #main > article:nth-child(even) {
+    background:
+    radial-gradient(var(--light-green) 3px, transparent 5px, var(--light-green) 7px, transparent 9px, var(--light-green) 11px, transparent 13px, var(--light-green) 15px, transparent 17px, var(--light-green) 19px, transparent 21px, var(--light-green) 23px, transparent 25px, var(--light-green) 27px, transparent 29px, var(--light-green) 31px, transparent 33px);
+    background-color: var(--white);
+    background-size: 30px 30px;    
+
+}
+
+.home #main > article .entry-header,
+.archive #main > article .entry-header,
+.search #main > article .entry-header {
+    display: flex;
+    flex-flow: column;
+}
+
+.home #main > article .entry-title,
+.archive #main > article .entry-title,
+.search #main > article .entry-title {
+    font-size: 1.8em;
+    order: 1;
+}
+
+.archive #main > .entry-title,
+.search #main > .entry-title {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1em 6vw;
+}
+
+.home #main > article .entry-header .entry-meta,
+.archive #main > article .entry-header .entry-meta,
+.search #main > article .entry-header .entry-meta {
+    font-weight: 700;
+    line-height: 1;
+    left: -1em;
+    order: 0;
+    position: relative;
+}
+
+.home #main > article .entry-time,
+.archive #main > article .entry-time,
+.search #main > article .entry-time {
+    font-size: 0.9em;
+    font-weight: 700;
+}	
+
+.home #main > article .entry-footer p,
+.archive #main > article .entry-footer p,
+.search #main > article .entry-footer p {
+    font-size: 0.9em;
+    margin: 0;
+}			
+
+
+/******************************************************************
+7. SINGLE POST STYLES
+******************************************************************/
+
+body.single main {
+    background-color: var(--light-green);
+    margin: 4em 3vw 2em 3vw;
+    padding: 1.5em;
+}
+
+body.single main .hentry {
+    padding: 0 0 1em 0;
+    position: relative;		
+}
+
+body.single main article .entry-header {
+    display: flex;
+    flex-flow: column;
+}
+
+body.single main article .entry-title {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    order: 1;  
+}
+
+body.single main article .entry-header .entry-date {
+    font-weight: 700;
+    order: 0;
+}
+
+body.single main article .entry-footer {
+    margin: 2em 0 0 0;
+}
+
+body.single main article .entry-footer p {
+    line-height: 1;
+}
+
+body.single main article .entry-title:after {
+    background: var(--gray);	  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0.75em 0 0 0;
+    width: 100%;    	
+}
+
+
+/******************************************************************
+8. PAGE STYLES
+******************************************************************/
+
+body.page main {
+    background-color: var(--white);
+    margin: 4em 3vw 2em 3vw;
+    padding: 1.5em;
+}
+
+body.page .hentry {
+    padding: 0 0 1em 0;
+    position: relative;		
+}
+
+body.page .entry-title {
+    margin: 0 0 0.5em 0;    
+}
+
+body.page .entry-footer {
+    margin: 2em 0 0 0;
+}
+
+body.page .entry-footer p {
+    line-height: 1;
+}
+
+body.page .entry-title:after {
+    background: var(--gray);	  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0.75em 0 0 0;
+    width: 100%;    	
+}
+
+
+/******************************************************************
+9. POSTS PAGINATION STYLES
+******************************************************************/
+
+.pagination {
+	font-size: 1.2em;
+	margin: 1em 0 1em 0;
+	padding: 0 1em;
+}
+
+.pagination .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination .page-numbers {
+	margin: 0 0.5em;
+}
+
+.pagination .current {
+    align-items: center;
+    border: 2px solid var(--site_text_color);
+    border-radius: 100%;
+    display: flex;
+    font-weight: 700;
+    height: 1.5em;
+    justify-content: center;
+    width: 1.5em;    
+}
+
+.pagination a {
+    font-family: var(--font_button);
+    text-decoration: none;
+}
+
+.post-navigation {
+	border-top: 1px solid var(--gray);
+	border-bottom: 1px solid var(--gray);	
+	font-size: 1.2em;
+	padding: 0.5em 0;
+}
+
+.post-navigation .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-navigation .nav-links a {
+    display: flex;
+}
+
+.post-navigation .nav-links .post-nav-title {
+    display: flex;
+}
+
+.post-navigation .nav-links .nav-next {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5em 0 0 0;		
+    width: 100%;
+}
+
+
+/******************************************************************
+10. COMMENTS STYLES
+******************************************************************/
+
+#commentlist {
+	margin: 3em 0 0 0;
+    max-width: 75ch;
+}
+
+#commentlist .comments-title {
+    border-bottom: 1px solid var(--gray);
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0 0 0.5em 0;
+    text-align: center;
+}
+
+#commentlist article {
+    border-bottom: 1px solid var(--gray);
+    margin: 0 0 2em 0;
+    padding: 0 0 1em 0;
+    position: relative;
+}
+
+#commentlist article header,
+#commentlist article section {
+    padding: 0;
+}
+
+#commentlist article section {
+    margin: 1em 0 0 0;
+}
+
+#commentlist article .comment-reply-link {
+    padding: 0.5em 1em;		
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#commentlist article p:first.child {
+    margin-top: 0;
+}
+
+#commentlist article p:last-child {
+    margin-bottom: 0;
+}
+
+#commentlist article cite {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#commentlist article time {
+    display: block;
+    font-size: 0.9em;
+    margin: 0.5em 0 0 0;
+}
+
+#commentlist .children {
+    margin: 0;
+    padding: 0 0 0 1em;
+}
+
+.comment-respond {
+    border-top: 1px solid var(--gray);
+    padding: 1em 0 0 0;
+	margin: 1.5em 0 0 0;
+}
+
+.comment-respond .comment-reply-title {
+    font-size: 1.5em;
+}
+
+.comment-respond label {
+    display: block;
+}
+
+.comment-respond input {
+    border: 1px solid var(--gray);
+    border-radius: 0;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.comment-respond input:focus {
+    border: 3px solid var(--peach);
+    outline: none;
+}
+
+.comment-respond textarea {
+    border: 1px solid var(--gray);
+    border-radius: 0;
+    height: 10em;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.comment-respond textarea:focus {
+    border: 3px solid var(--peach);
+    outline: none;
+}
+
+.comment-respond #cookies {
+    display: inline;
+    margin: 0 0.5em 0 0;
+    width: 44px;
+    height: 44px;
+}
+
+.comment-respond .cookie-notification {
+    display: flex;
+}
+
+.comment-respond .cookies-label {
+    display: inline;
+}
+
+
+/******************************************************************
+11. SIDEBAR STYLES
+******************************************************************/
+
+aside {	
+	background-color: rgba(199, 205, 202, 0.8);
+	display: flex;
+	flex-flow: column;
+	padding: 1.5em;
+}
+
+aside > section {
+    padding: 0;
+    margin: 0 0 3em 0;
+    max-width: 25em;
+}
+
+aside ol,
+aside ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+aside ul {
+    list-style-type: disc;
+}
+
+aside ul li,
+aside ol li {
+	margin: 0 0 0.5em 0;
+}
+
+aside ul li:last-child,
+aside ol li:last-child {
+    margin: 0;
+}
+
+aside h2 {
+    font-size: 1.5em;		
+    margin: 0 0 0.25em 0;
+    padding: 0 0 0.25em 0;
+}
+
+aside h2:after {
+    background: var(--light-gray);		  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 6px 0 0 0;
+    width: 100%;
+}
+
+/* Recent Comments widget styles */
+aside .widget_recent_comments {
+    font-weight: 700;
+}
+
+aside .widget_recent_comments .comment-author-link {
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Tag Cloud widget styles */
+aside .widget_tag_cloud {
+    line-height: 1.5;
+}
+
+aside .widget_tag_cloud	.tag-cloud-link {
+	margin: 0 1em 0 0;
+}
+
+
+/******************************************************************
+12. SEARCH FORM STYLES
+******************************************************************/
+
+.searchform {
+	display: flex;
+	max-width: 100%;
+}
+
+.searchform	input {
+    border-radius: 0;
+    max-width: 100%;
+    padding: 0 0.5em;
+    -webkit-appearance: none;		
+}
+
+.site-header .searchform {
+    justify-content: center;
+    margin: 1.5em 0;
+}
+
+.site-header .searchform input {
+    height: 2em;
+    width: 70vw;
+}
+
+.searchform input:focus {
+    border: 2px solid var(--green);
+    outline: none;
+}
+
+/******************************************************************
+13. POST THUMBNAIL STYLES
+******************************************************************/
+
+.post-thumbnail {
+	display: block;	
+}
+
+
+/******************************************************************
+14. FOOTER STYLES
+******************************************************************/
+
+.site-footer {
+	background: var(--green);
+    padding: 1em 3vw;
+}
+
+.site-footer p {
+    color: var(--light-gray);
+    margin: 0;    
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--light-gray);
+}
+
+
+/******************************************************************
+15. BUTTONS
+******************************************************************/
+
+/* Example button defaults */
+button {
+    background-color: var(--button_bgcolor);
+    border: none;
+    border-radius: 0;
+    color: var(--button_color);
+    cursor: pointer;
+    font-family: var(--font_button);
+    letter-spacing: 1px;
+    outline: 0;
+    padding: 0.5em;
+    position: relative;
+    text-decoration: none;
+}
+
+
+/* Example button defaults */
+.nav-button {
+    background: var(--white);
+    border: none;
+    border-radius: 0;    
+    cursor: pointer;
+    display: block;
+    height: 4px;
+    margin: 0;    
+    padding: 0;
+    position: relative;
+    text-indent: -9999px;
+    transition: all 0.25s ease-out;
+    width: 30px;   
+}
+
+.nav-button:before {
+    background: var(--white);
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    margin-top: -10px;
+    position: absolute;
+    transition: margin 0.25s ease-out 0.25s, transform 0.25s ease-out, background-color 0.25s ease-out;
+    width: 30px;
+}
+    
+.nav-button:after {
+    background: var(--white);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    margin-bottom: -10px;
+    position: absolute;
+    transition: margin 0.25s ease-out 0.25s, transform 0.25s ease-out, background-color 0.25s ease-out;
+    width: 30px;
+}
+
+.nav-button.close {
+    height: 0;
+}
+  
+.nav-button.close:before {
+    background-color: red;
+    margin-top: 0;
+    opacity: 1;
+    top: 0;
+    transform-origin: center;
+    transform: rotate(45deg);    
+    transition: margin 0.25s ease-out, transform 0.25s ease-out 0.25s, background-color 0.25s ease-out 0.25s;
+}
+  
+.nav-button.close:after {
+    background-color: red;
+    bottom: -4px;
+    margin-bottom: 0;
+    opacity: 1;
+    transform: rotate(-45deg);
+    transform-origin: -center;
+    transition: margin 0.25s ease-out, transform 0.25s ease-out 0.25s, background-color 0.25s ease-out 0.25s;
+}
+  
+
+/* Read More Button */
+.read-more {
+    background-color: var(--button_bgcolor);
+    border: none;
+    box-sizing: border-box;
+    color: var(--button_color);
+    cursor: pointer;
+    font-family: var(--font_button);
+    outline: 0;
+    padding: 0.5em;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+
+/* Search Toggle Button */
+.search-toggle {
+	background: none;
+    color: var(--black);
+    font-family: var(--font_button);
+    font-size: 2em;
+    font-weight: 700;
+	padding: 0;
+    transform: rotate(-45deg);
+}
+
+.searchsubmit {
+    align-items: center;    
+    display: flex;
+    height: 2em;
+    padding: 0 0.5em;
+}
+
+.search-glass {
+  display: block;
+  font-size: 1.5em;
+  transform: rotate(-45deg);
+}
+
+/* Dropdown Menu Toggle Button */
+.dropdown-toggle {
+    background: none;
+    border: none;
+    border-radius: 0;
+    bottom: 0.3em;
+    box-sizing: border-box;
+    color: var(--white);
+    cursor: pointer;
+    font-family: var(--font_button);
+    font-weight: 700;  
+    margin: 0 0 0 1em;
+    outline: 0; 
+    padding: 0;
+    position: relative;
+    transform: scale(1.5);
+    text-decoration: none; 
+}
+
+
+/* Comment Form Submit Button */
+.comment-form .submit {
+    background-color: var(--button_bgcolor);
+    border: none;
+    border-radius: 0;
+    color: var(--button_color);
+    cursor: pointer;
+    display: block;    
+    font-family: var(--font_button);
+    letter-spacing: 1px;
+    margin: 0 auto;    
+    outline: 0;
+    padding: 0.5em 1em;  
+    position: relative;
+    text-decoration: none;
+    transition: all 0.5s ease-out;    
+    width: auto;
+}
+
+.comment-form .submit:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/******************************************************************
+16. ANIMATIONS
+******************************************************************/
+
+@-webkit-keyframes openLightbox {
+    0% {
+        transform: scale(0.1);
+		opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+		opacity: 1;
+    }
+}
+
+
+@keyframes openLightbox {
+    0% {
+        transform: scale(0.1);
+		opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+		opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInMenu {
+    0% {
+		opacity: 0;
+    }
+
+    100% {
+		opacity: 1;
+    }
+}
+
+
+@keyframes fadeInMenu {
+    0% {
+		opacity: 0;
+    }
+
+    100% {
+		opacity: 1;
+    }
+}
+
+
+/******************************************************************
+17. MEDIA QUERIES
+******************************************************************/
+
+/* 17.1. Styles for 768px and larger screen sizes */
+@media only screen and (min-width: 768px) {
+
+    /******************************************************************
+    17.1.1. TYPOGRAPHY
+    ******************************************************************/
+
+    pre {
+        max-width: 480px;
+    }
+
+
+    /******************************************************************
+    17.1.2. MAIN HEADER STYLES
+    ******************************************************************/
+    .site-header {
+        align-items: center;
+        display: grid;
+        grid-template-areas:
+        "nav search-btn"
+        "title title"
+        "desc desc";        
+        grid-template-columns: 1fr 5em;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .site-title {
+        font-size: 2.5em;
+        margin: 100px 0 0 20vw;
+        text-align: left;
+    }
+
+    .site-description {
+        margin: 1em 0 100px 20vw;
+        text-align: left;
+    }
+
+    .nav-btn-wrap {
+        display: none;
+    }
+
+    .search-toggle-wrap {
+        align-items: center;
+        background: var(--green);
+        display: flex;
+        height: 3em;
+        justify-content: center;        
+        margin: 0;
+    }    
+
+
+    /******************************************************************
+    17.1.3. NAVIGATION STYLES
+    ******************************************************************/
+
+    .nav-button {
+        display: none;
+    }
+
+    .main-nav {
+        align-items: center;
+        align-self: start;
+        background: var(--green);
+        display: flex;  
+        grid-area: nav;
+        height: 3em;
+        justify-content: center;        
+        padding: 0;
+        position: relative;
+        z-index: 110;
+    }
+
+    .main-nav > ul {
+        background-color: transparent;
+        box-shadow: none;
+        height: auto; 		
+        list-style: none;
+        margin: 0;
+        overflow-y: unset;		
+        padding: 0;
+        position: relative;
+        text-align: center;
+        transform: translateX(0);
+        transition: none;
+        width: 100%;
+    }
+
+    .main-nav > ul > li {
+        margin: 0 1em 0 0;
+        padding: 0;			
+    }
+    
+    .main-nav > ul ul {
+        background-color: var(--light-green);
+        left: -999em;	  	
+        list-style: none;	  	
+        min-width: 180px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: -999em;
+        z-index: 150;
+    }
+
+    .main-nav > ul ul .sub-menu {
+        background-color: var(--light-gray);
+    }
+    
+    .main-nav > ul ul .sub-menu a {
+        color: var(--brown);
+    }     
+
+    .main-nav > ul .sub-menu {
+        margin: 0;
+    }
+    
+    .main-nav li {
+        display: inline-block;
+        position: relative;
+        text-align: left; /* Reset text alignment */
+    }
+
+    .main-nav li:after {
+        background: none;
+        background-color: var(--white);    		
+        content: "";
+        display: block;
+        height: 2px;
+        margin: 0 auto;
+        transition: width 0.5s ease;
+        width: 0;	    	
+    }
+
+    .main-nav li:hover:after {
+        width: 100%;
+    }
+
+    .main-nav li:last-child:after {
+        display: block;
+    }
+
+    .main-nav li.current-menu-item:after {
+        background: var(--white);
+    }    
+
+    .main-nav li > ul {
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    .main-nav li > ul.toggled-on {
+        left: auto;
+        opacity: 1;
+        top: 26px;               	
+    }
+
+    .main-nav li:hover > ul,
+    .main-nav li.focus > ul {
+        display: block;
+        left: auto;
+        opacity: 1;        
+        top: 26px;
+    }
+        
+    .main-nav li li {
+        border-bottom: 1px solid var(--light-gray);
+        display: block;
+        padding: 0 8px;
+    }
+
+    .main-nav li li:first-child {
+        padding: 8px 8px 0 8px;
+    }
+
+    .main-nav li li:last-child {
+        padding: 0 8px 8px 8px;
+    }
+
+    .main-nav li li > ul.toggled-on {
+        left: 100%;
+        top: 0;      	
+    }
+
+    .main-nav li li:hover > ul,
+    .main-nav li li.focus > ul{
+        left: 100%;
+        top: 0;
+    }
+
+    .main-nav ul a {
+        color: var(--green);
+        font-size: 1em;
+    }
+    
+    .main-nav ul ul a,
+    .main-nav ul ul ul a {
+        color: var(--green);
+        font-size: 1em;
+    }    
+
+    .main-nav > ul a {
+        color: var(--white);
+    }
+    
+    .main-nav .dropdown-toggle {
+        color: var(--white);
+        margin: 0 0 0 4px;
+        top: 0;
+    }
+
+    .main-nav ul ul .dropdown-toggle,
+    .main-nav ul ul ul .dropdown-toggle {
+        color: var(--green);
+    }    
+
+
+    /******************************************************************
+    17.1.4. MAIN CONTENT LAYOUT STYLES
+    ******************************************************************/
+
+    main {
+        margin: 0;
+    }    
+
+    .home #main .entry-header,
+    .home #main .entry-content,
+    .home #main .entry-footer,
+    .archive #main .entry-header,
+    .archive #main .entry-content,
+    .archive #main .entry-footer,
+    .search #main .entry-header,
+    .search #main .entry-content,
+    .search #main .entry-footer {
+        max-width: 75ch;
+    }
+
+
+    .home #main article .post-thumbnail,
+    .archive #main article .post-thumbnail,
+    .search #main article .post-thumbnail {
+        margin: 0 0 1em 0;
+    }
+
+    .home #main article .entry-meta,
+    .archive #main article .entry-meta,
+    .search #main article .entry-meta {
+        margin: 0 0 1em 0;
+    }
+
+
+    /******************************************************************
+    17.1.5. SINGLE POST STYLES
+    ******************************************************************/
+
+    body.single main {
+        align-self: start;
+        margin: 0 5vw 2em 5vw;
+        padding: 2em;
+    }
+
+    body.single main article .entry-header {    
+        display: flex;
+        flex-flow: row;
+        margin: 0 0 1em 0;
+        position: relative;
+    }
+
+    body.single main article .entry-header:after {    
+        background: var(--gray);	  		
+        content: "";
+        display: block;
+        height: 1px;
+        margin: 0.75em 0 0 0;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+ 
+    body.single main article .entry-title {
+        width: 60%;
+    }
+
+    body.single main article .entry-title:after {
+        display: none;    	
+    }
+
+    body.single main article .entry-header .entry-title {
+        order: 0;
+    }
+
+    body.single main article .entry-header .entry-meta {
+        order: 1;
+    }
+
+    body.single main article .entry-date {
+        text-align: right;
+        font-size: 1.2em; 
+        margin: 0;
+        width: 40%;
+    }
+
+    body.single main article .entry-header,
+    body.single main article .entry-content,
+    body.single main article .entry-footer {
+        max-width: 75ch;
+    }
+
+
+
+    /******************************************************************
+    17.1.6. PAGE STYLES
+    ******************************************************************/
+    
+    body.page main {
+        align-self: start;
+        margin: 0 5vw 2em 5vw;
+        padding: 2em;
+    }
+
+    body.page main article .entry-title:after {    
+        margin: 0.5em 0 0 0;
+    }
+
+    body.page main article .entry-header,
+    body.page main article .entry-content {
+        max-width: 75ch;
+    }
+
+
+    /******************************************************************
+    17.1.7. POSTS PAGINATION STYLES
+    ******************************************************************/
+
+    .post-navigation .nav-links .nav-next {
+        justify-content: normal;
+        margin: 0 0 0 3em;		
+        width: auto;
+    }  
+
+    /******************************************************************
+    17.1.8. SIDEBAR STYLES
+    ******************************************************************/
+
+    aside {
+        flex-flow: row;
+        flex-wrap: wrap;
+        padding: 6vw;
+    }
+
+    aside section {
+        padding: 0 0 0 1.5em;		
+        width: 50%;
+    }
+
+    aside section:nth-child(odd) {
+        padding: 0 1.5em 0 0;
+    }
+
+    aside section > li {
+        margin-right: 3em;
+    }
+
+    aside section > li:first-child {
+        margin-top: 0;
+    }	
+
+
+    /******************************************************************
+    17.1.9. SEARCH FORM STYLES
+    ******************************************************************/
+
+    .site-header .searchform {
+        position: fixed;		
+        right: 0;
+        top: 0;	
+        transform: translateY(-40em);
+        transition: all 0.5s ease;
+        background: rgba(0,0,0,0.95);
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+        height: 15em;
+        z-index: 120;		
+    }
+    
+    .site-header .searchform.active {
+        opacity: 1;
+        transform: translateY(0);			
+        transition: all 0.5s ease;
+    }
+
+    .site-header .searchform input {
+        height: 2em;
+        width: 20em;
+    }
+
+    .site-header .search-toggle {
+        color: var(--white);
+    }
+    
+    .searchform-open .site-header .search-toggle {
+        background-color: transparent;
+        position: fixed;
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5em;
+        height: 1.5em;
+        border: 2px solid red;
+        border-radius: 100%;
+        font-size: 2em;
+        transform: none;
+        top: 3vw;
+        right: 3vw;
+        z-index: 130;
+    }
+
+
+    /******************************************************************
+    17.1.10. COMMENTS STYLES
+    ******************************************************************/
+
+    .comment-respond {
+        max-width: 75ch;
+    }    
+
+}
+/* End of 768px Media Query */
+
+
+/* 17.2. Styles for 1024px and larger screen sizes */
+@media only screen and (min-width: 1024px) {
+
+    /******************************************************************
+    17.2.1. TYPOGRAPHY
+    ******************************************************************/
+
+    pre {
+        max-width: 75ch;
+    }
+
+
+    /******************************************************************
+    17.2.2. MAIN LAYOUT STYLES
+    ******************************************************************/
+
+    body {
+        display: grid;
+        grid-template-columns: 3fr 320px;
+        grid-template-areas:
+            "header header"
+            "main sidebar"
+            "pagenavi ..."
+            "footer footer";
+    }
+
+    .site-header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+        margin: 0;
+    }
+
+    aside {
+        grid-area: sidebar;
+    }
+
+    .site-footer {
+        grid-area: footer;
+    }
+
+
+    /******************************************************************
+    17.2.3. MAIN CONTENT LAYOUT STYLES
+    ******************************************************************/
+
+    .home #main > article,
+    .archive #main > article,
+    .search #main > article {
+        position: relative;
+        z-index: 10;
+    }
+
+    .home #main > article:nth-child(odd):after,
+    .archive #main > article:nth-child(odd):after,
+    .search #main > article:nth-child(odd):after {
+        background-color: #dddddd; 
+        bottom: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        right: -320px;
+        top: 0;
+        width: 320px;
+    }    
+
+    .home #main > article:nth-child(even):after,
+    .archive #main > article:nth-child(even):after,
+    .search #main > article:nth-child(even):after {
+        background:
+        radial-gradient(var(--light-green) 3px, transparent 5px, var(--light-green) 7px, transparent 9px, var(--light-green) 11px, transparent 13px, var(--light-green) 15px, transparent 17px, var(--light-green) 19px, transparent 21px, var(--light-green) 23px, transparent 25px, var(--light-green) 27px, transparent 29px, var(--light-green) 31px, transparent 33px);
+        background-color: var(--green);
+        background-size: 30px 30px;    
+        bottom: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        right: -320px;
+        top: 0;
+        width: 320px;
+    }
+
+
+    /******************************************************************
+    17.2.4. SINGLE POST STYLES
+    ******************************************************************/
+
+    body.single main {
+        margin: 0 0 2em 0;
+        padding: 4em;
+    }
+
+
+    /******************************************************************
+    17.2.5. PAGE STYLES
+    ******************************************************************/
+    
+    body.page main {
+        margin: 0 0 2em 0;
+        padding: 4em;
+    }
+
+
+    /******************************************************************
+    17.2.6. SIDEBAR STYLES
+    ******************************************************************/
+
+    aside {
+        flex-flow: column;
+        margin: 0;
+        padding: 2em;
+        position: relative;
+        z-index: 20;
+    }
+
+    aside section {
+        padding: 0;	
+        width: auto;
+    }
+
+    aside section:nth-child(odd) {
+        padding: 0;
+    }
+
+}
+/* End of 1024px Media Query */

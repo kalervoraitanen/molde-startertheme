@@ -660,7 +660,6 @@ body.page .entry-title:after {
 ******************************************************************/
 
 .pagination {
-    color: var(--black);
 	font-size: 1.2em;
 	margin: 1em 0 1em 0;
 	padding: 0 1em;
@@ -678,7 +677,7 @@ body.page .entry-title:after {
 
 .pagination .current {
     align-items: center;
-    border: 2px solid var(--black);
+    border: 2px solid var(--site_text_color);
     border-radius: 100%;
     display: flex;
     font-weight: 700;
@@ -688,11 +687,9 @@ body.page .entry-title:after {
 }
 
 .pagination a {
-    color: var(--black);
     font-family: var(--font_button);
     text-decoration: none;
 }
-
 
 .post-navigation {
 	border-top: 1px solid var(--gray);
@@ -707,7 +704,11 @@ body.page .entry-title:after {
     justify-content: space-between;
 }
 
-.post-navigation .nav-links .nav-title {
+.post-navigation .nav-links a {
+    display: flex;
+}
+
+.post-navigation .nav-links .post-nav-title {
     display: flex;
 }
 
@@ -1528,9 +1529,9 @@ button {
 
     .post-navigation .nav-links .nav-next {
         justify-content: normal;
-        margin: 0;		
+        margin: 0 0 0 3em;		
         width: auto;
-    }    
+    }  
 
     /******************************************************************
     17.1.8. SIDEBAR STYLES

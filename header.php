@@ -56,7 +56,7 @@ The header for Molde theme
 					'container_class' => '',
 					'container_id'    => '',
 					'menu_class'      => '',
-					'menu_id'         => '',
+					'menu_id'         => 'primary-menu-list',
 					'echo'            => true,
 					'fallback_cb'     => 'wp_page_menu',
 					'before'          => '',

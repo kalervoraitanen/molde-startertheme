@@ -12,29 +12,36 @@ PRINT CATEGORIES AND TAGS
 if ( ! function_exists( 'molde_categories_tags' ) ) :
 
 	function molde_categories_tags() {
-    // Get Categories for posts.
-    $categories_list = get_the_category_list( ', ' );
+		// Get Categories for posts.
+		$categories_list = get_the_category_list( ', ' );
 
-    /* Show post categories if categories found */ 
-    if ( $categories_list ) {
-		  echo '<p class="entry-meta">';
+		/* Show post categories if categories found */ 
+		if ( $categories_list ) {
+			echo '<p class="entry-meta">';
 
-		      echo __( 'Categories', 'molde-theme' ) . ': ' . $categories_list;
+			echo __( 'Categories', 'molde-theme' ) . ': ' . $categories_list;
 
-		  echo '</p>';
+			echo '</p>';
 		}
 
-	  // Get Tags for posts.
-	  $tags_list = get_the_tag_list( '', ', ' );
+		// Get Tags for posts.
+		$tags_list = get_the_tag_list( '', ', ' );
 
 		/* Show post tags if tags found */ 
-	  if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-	  	echo '<p class="entry-meta">';
+		if ( $tags_list && ! is_wp_error( $tags_list ) ) {
+			echo '<p class="entry-meta">';
 
-	    echo __( 'Tags', 'molde-theme' ) . ': ' . $tags_list;
+			echo __( 'Tags', 'molde-theme' ) . ': ' . $tags_list;
 
-	  	echo '</p>';	    
-	  }
+			echo '</p>';	    
+		}
+
+		/* Show comment count */
+		echo '<p class="post-comments">';
+
+		echo '<span class="comment-count" itemprop="commentCount">' . esc_html( get_comments_number() ) . ' </span>' . esc_html( 'Comments', 'molde-theme' );
+
+		echo '</p>';
 	}
 endif;
 

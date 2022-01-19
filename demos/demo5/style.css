@@ -1,0 +1,1690 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Molde Starter Theme - Demo5
+Theme URI: https://github.com/kalervoraitanen/molde-startertheme
+Author: Kalervo Raitanen
+Author URI: http://www.kalervoraitanen.com
+Description: Molde Starter Theme - Demo5 is a minimalist and animated blogging theme.
+Requires at least: 5.3
+Tested up to: 5.8.3
+Requires PHP: 5.6
+Version: 1.0
+License: WTFPL License. 
+License URI: http://sam.zoy.org/wtfpl/
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# 1. VARIABLES
+# 2. GENERAL STYLES
+# 3. TYPOGRAPHY
+    # 3.1. Body styles
+	# 3.2. Paragraph styles
+	# 3.3. Link styles
+    # 3.4. Header styles
+    # 3.5. Table styles
+    # 3.6. Definiton list styles
+    # 3.7. UL and OL styles
+    # 3.8. Other typographic styles
+# 4. MAIN HEADER STYLES
+# 5. NAVIGATION STYLES
+# 6. MAIN CONTENT LAYOUT STYLES
+# 7. SINGLE POST STYLES
+# 8. PAGE STYLES
+# 9. POSTS PAGINATION STYLES
+# 10. COMMENTS STYLES
+# 11. SIDEBAR STYLES
+# 12. SEARCH FORM STYLES
+# 13. POST THUMBNAIL STYLES
+# 14. FOOTER STYLES
+# 15. BUTTONS
+# 16. Z-INDEXES
+# 17. ANIMATIONS
+# 18. MEDIA QUERIES
+    # 18.1. Styles for 768px and larger screen sizes
+        # 18.1.1. Typography
+        # 18.1.2. Main layout styles
+        # 18.1.3. Main header styles
+        # 18.1.4. Navigation styles
+        # 18.1.5. Main content layout styles
+        # 18.1.6. Single post styles
+        # 18.1.7. Page styles
+        # 18.1.8. Posts pagination styles
+        # 18.1.9. Sidebar styles
+        # 18.1.10. Search form styles
+        # 18.1.11. Comments styles
+    # 18.2. Styles for 1024px and larger screen sizes
+        # 18.2.1. Typography
+        # 18.2.2. Single post styles
+        # 18.2.3. Page styles
+--------------------------------------------------------------*/
+
+
+/******************************************************************
+1. VARIABLES
+******************************************************************/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Arimo&display=swap');
+
+:root {
+    /* Colors */
+    --white: #eeeeee;
+    --black: #111111;
+    --blue: #0d3071;
+    --red: #d6444e;
+    --gray: #444444;
+    --light-gray: #bbbbbb;
+
+    /* Fonts */
+    --font-heading: 'Lora', Georgia, serif;;
+    --font_main: 'Open Sans', Arial, sans-serif;
+    --font_button: "Arimo", Arial, sans-serif;
+}
+
+
+/******************************************************************
+2. GENERAL STYLES
+******************************************************************/
+
+html {
+    background: var(--white);
+}
+
+body {
+    background-color: var(--black);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    clip-path: inset(45% 20% 45% 20%);    
+    opacity: 0;
+    transition: opacity 1.5s ease-out, clip-path 0.25s ease-out;
+}
+
+img.show {
+    clip-path: inset(0% 0% 0% 0%);    
+    opacity: 1;
+}
+
+
+/******************************************************************
+3. TYPOGRAPHY
+******************************************************************/
+
+/* 3.1. Body styles */
+body {
+    color: var(--white);
+    font-family: var(--font_main);
+    font-size: 100%;
+    line-height: 1;
+    position: relative;    
+}
+
+
+/* 3.2. Paragraph styles */
+p:first-child {
+    margin-top: 0;
+}
+  
+p,
+textarea,
+figcaption {
+    line-height: 1.8;
+}
+
+
+/* 3.3. Link styles */
+a {
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* 3.4. Header styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  max-width: 100%;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  padding-top: 0;
+}
+
+h1 {
+  font-size: 2.2em;
+  padding: 0.8em 0 0.6em 0;
+}
+
+h2 {
+  font-size: 2.0em;
+  padding: 1em 0 0.6em 0;
+}
+
+h3 {
+  font-size: 1.8em;
+  padding: 1em 0 0.6em 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  padding: 1em 0 0.6em 0;
+}
+
+h5 {
+  font-size: 1.3em;
+  padding: 1em 0 0.6em 0;
+}
+
+h6 {
+  font-size: 1.2em;
+  padding: 1em 0 0.6em 0;
+}
+
+
+/* 3.5. Table styles */
+table {
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+table tr:first-child {
+    border-top: 1px solid var(--light-gray);
+}
+  
+table th,
+table td {
+    border-left: 1px solid var(--light-gray);
+    border-right: 1px solid var(--light-gray);
+    padding: 0.5em;
+}
+  
+  
+/* 3.6. Definiton list styles */
+dl {
+    line-height: 1.8;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0.25em 0 1em 1em;
+}
+
+
+/* 3.7. UL and OL styles */
+ul,
+ol {
+    line-height: 1.5;
+    list-style-position: inside;
+    margin: 1em 0;
+}
+
+li {
+    margin: 0 0 0.5em 0;
+}
+
+li:last-child {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0.5em 0 0 1em;
+}
+
+
+/* 3.8. Other typographic styles */
+hr {
+    color: var(--gray);
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+blockquote {
+    background: var(--light-gray);
+    border-left: 6px solid var(--gray);
+    color: var(--black);  
+    font-style: italic;
+    margin: 0;
+    overflow: hidden;
+    padding: 1em 1em 1em 2em;    
+    quotes: "" "";
+}
+
+blockquote cite {
+    display: block;
+    font-weight: 700;
+    margin-top: 0.5em;
+}
+
+blockquote:before,
+blockquote:after {
+    content: "";
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+
+pre {
+    margin: 1em 0;
+    max-width: 300px;
+    overflow: auto;
+    padding: 0 0 0 1em;
+}
+
+code,
+kbd,
+tt,
+var {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code {
+    background: #1b1b1b;
+    color: var(--white);
+    display: block;
+    margin: 1em 0;  
+    padding: 0.5em 1em;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted var(--gray);
+    cursor: help;
+}
+
+mark,
+ins {
+    text-decoration: none;
+}
+
+big {
+    font-size: 125%;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
+}
+
+
+/******************************************************************
+4. MAIN HEADER STYLES
+******************************************************************/
+
+.site-header {
+    background: var(--black);	
+	display: grid;
+	grid-template-columns: 6fr 1fr 2fr;
+	grid-template-areas:
+      "title search-btn nav-btn";
+    padding: 1em 3vw;
+}
+
+.site-title {
+    grid-area: title;
+    line-height: 1;    
+    margin: 0;
+    padding: 0;
+}
+
+.site-title a {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.site-description {
+    color: var(--light-gray);
+    font-style: italic;
+    line-height: 1;
+    margin: 1em 0;
+}
+
+.nav-btn-wrap {
+    align-items: center;
+    display: flex;
+    grid-area: nav-btn;
+    justify-content: flex-end;
+}
+
+.search-toggle-wrap {
+    align-items: center;
+    display: flex;
+    grid-area: search-btn;
+    justify-content: flex-end;
+}
+
+
+/******************************************************************
+5. NAVIGATION STYLES
+******************************************************************/
+
+.main-nav {
+	display: none;
+}
+
+.main-nav.active {
+    align-items: center;
+    background: rgba(0,0,0,0.9);
+    bottom: 0;
+    display: grid;
+    justify-content: center;
+    left: 0;
+    opacity: 0;       
+    overflow-y: scroll;
+    padding: 2em 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    -webkit-animation: openLightbox .5s forwards ease-out;
+    animation: openLightbox .5s forwards ease-out;
+    transform: scale(0.1);
+}
+
+.main-nav ul {
+    list-style-type: none;
+}
+
+.main-nav > ul {
+    padding: 0;
+    width: 70vw;      
+}
+
+.main-nav.active > ul {
+    -webkit-animation: fadeInMenu .5s forwards ease-out 0.5s;
+    animation: fadeInMenu .5s forwards ease-out 0.5s;
+    opacity: 0;
+}
+
+.main-nav ul ul,
+.main-nav ul ul ul {
+    display: none;
+    margin: 0 0 0 1.5em;
+    padding: 0;
+}
+
+.main-nav ul ul.toggled-on,
+.main-nav ul ul ul.toggled-on {
+    display: block;
+}
+
+.main-nav li {
+    padding: 0 0 4px 0;
+    position: relative;    
+}
+
+.main-nav li:after {
+    background: var(--light-gray);    
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;    
+}
+
+.main-nav li:last-child:after {
+    display: none;
+}
+
+.main-nav li.current-menu-item:after {
+    background: var(--white);    
+    content: "";
+    display: block;
+    height: 2px;
+    top: 2px;
+    width: 100%;    
+}
+
+.main-nav a {
+    color: var(--white);
+    font-family: var(--font_button);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.main-nav ul ul a {
+    font-size: 1.3em;
+}
+
+.main-nav ul ul ul a {
+    font-size: 1.2em;
+}
+
+
+/******************************************************************
+6. MAIN CONTENT LAYOUT STYLES
+******************************************************************/
+
+.home #main > article,
+.archive #main > article,
+.search #main > article {
+    padding: 1.5em;
+    position: relative;
+}
+
+.home #main > h1,
+.archive #main > h1,
+.search #main > h1 {
+    padding: 24px 0;
+    width: 100%;
+}
+
+.home #main > article:nth-child(odd),
+.archive #main > article:nth-child(odd),
+.search #main > article:nth-child(odd) {
+    background-color: var(--red);
+}
+
+.home #main > article:nth-child(even),
+.archive #main > article:nth-child(even),
+.search #main > article:nth-child(even) {
+    background-color: var(--blue);
+}
+
+.home #main > article:first-child,
+.archive #main > article:first-child,
+.search #main > article:first-child {
+    animation: animateBg 7.5s ease-in-out infinite;
+    background: linear-gradient(-45deg, var(--blue) 0%,  var(--red) 100%);
+    background-size: 400% 400%;
+    color: var(--white);
+    width: 100%;
+}
+
+.home #main > article .entry-header,
+.archive #main > article .entry-header,
+.search #main > article .entry-header {
+    display: flex;
+    flex-flow: column;
+}
+
+.home #main > article .entry-title,
+.archive #main > article .entry-title,
+.search #main > article .entry-title {
+    font-size: 1.8em;
+    order: 1;
+}
+
+.home #main > article .entry-header .entry-meta,
+.archive #main > article .entry-header .entry-meta,
+.search #main > article .entry-header .entry-meta {
+    font-weight: 700;
+    line-height: 1;
+    order: 0;
+}
+
+.home #main > article .entry-time,
+.archive #main > article .entry-time,
+.search #main > article .entry-time {
+    font-size: 0.9em;
+    font-weight: 700;
+}	
+
+.home #main > article .entry-footer p,
+.archive #main > article .entry-footer p,
+.search #main > article .entry-footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.home #main > article .post-comments,
+.archive #main > article .post-comments,
+.search #main > article .post-comments {
+    bottom: 0;    
+    position: absolute;
+    right: 1.5em;
+}	
+
+
+/******************************************************************
+7. SINGLE POST STYLES
+******************************************************************/
+
+body.single main {
+    background-color: var(--blue);
+    padding: 1.5em;
+}
+
+body.single main .hentry {
+    padding: 0 0 1em 0;
+    position: relative;		
+}
+
+body.single main article .entry-header {
+    display: flex;
+    flex-flow: column;
+}
+
+body.single main article .entry-title {
+    margin: 0 0 0.5em 0;
+    order: 1;      
+    padding: 0;
+}
+
+body.single main article .entry-header .entry-date {
+    font-weight: 700;
+    order: 0;
+}
+
+body.single main article .entry-footer {
+    margin: 2em 0 0 0;
+}
+
+body.single main article .entry-footer p {
+    line-height: 1;
+}
+
+body.single main article .entry-title:after {
+    background: var(--gray);	  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0.75em 0 0 0;
+    width: 100%;    	
+}
+
+
+/******************************************************************
+8. PAGE STYLES
+******************************************************************/
+
+body.page main {
+    background-color: var(--red);
+    padding: 1.5em;
+}
+
+body.page .hentry {
+    padding: 0 0 1em 0;
+    position: relative;		
+}
+
+body.page .entry-title {
+    margin: 0 0 0.5em 0;    
+}
+
+body.page .entry-footer {
+    margin: 2em 0 0 0;
+}
+
+body.page .entry-footer p {
+    line-height: 1;
+}
+
+body.page .entry-title:after {
+    background: var(--gray);	  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0.75em 0 0 0;
+    width: 100%;    	
+}
+
+
+/******************************************************************
+9. POSTS PAGINATION STYLES
+******************************************************************/
+
+.pagination {
+	font-size: 1.2em;
+	margin: 1.5em 1em 2em 1em;
+}
+
+.pagination .nav-links {
+    align-items: center;    
+    display: flex;
+    justify-content: center;
+}
+
+.pagination .page-numbers {
+	margin: 0 0.5em;
+}
+
+.pagination .current {
+    align-items: center;
+    border: 2px solid var(--white);
+    border-radius: 100%;
+    display: flex;
+    font-weight: 700;
+    height: 1.5em;
+    justify-content: center;
+    width: 1.5em;    
+}
+
+.pagination a {
+    font-family: var(--font_button);
+    text-decoration: none;
+}
+
+.post-navigation {
+	border-bottom: 1px solid var(--gray);    
+	border-top: 1px solid var(--gray);
+	font-size: 1.2em;
+	padding: 0.5em 0;
+}
+
+.post-navigation .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-navigation .nav-links a {
+    display: flex;
+}
+
+.post-navigation .nav-links .post-nav-title {
+    display: flex;
+}
+
+.post-navigation .nav-links .nav-next {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5em 0 0 0;		
+    width: 100%;
+}
+
+
+/******************************************************************
+10. COMMENTS STYLES
+******************************************************************/
+
+#commentlist {
+	margin: 3em 0 0 0;
+    max-width: 69ch;
+}
+
+#commentlist .comments-title {
+    border-bottom: 1px solid var(--gray);
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0 0 0.5em 0;
+    text-align: center;
+}
+
+#commentlist article {
+    border-bottom: 1px solid var(--gray);
+    margin: 0 0 2em 0;
+    padding: 0 0 1em 0;
+    position: relative;
+}
+
+#commentlist article header,
+#commentlist article section {
+    padding: 0;
+}
+
+#commentlist article section {
+    margin: 1em 0 0 0;
+}
+
+#commentlist article .comment-reply-link {
+    padding: 0.5em 1em;		
+    position: absolute;
+    right: 0;
+    top: 0;    
+}
+
+#commentlist article p:first.child {
+    margin-top: 0;
+}
+
+#commentlist article p:last-child {
+    margin-bottom: 0;
+}
+
+#commentlist article cite {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#commentlist article time {
+    display: block;
+    font-size: 0.9em;
+    margin: 0.5em 0 0 0;
+}
+
+#commentlist .children {
+    margin: 0;
+    padding: 0 0 0 1em;
+}
+
+.comment-respond {
+    border-top: 1px solid var(--gray);
+	margin: 1.5em 0 0 0;
+    padding: 1em 0 0 0;    
+}
+
+.comment-respond .comment-reply-title {
+    font-size: 1.5em;
+}
+
+.comment-respond label {
+    display: block;
+}
+
+.comment-respond input {
+    border: 1px solid var(--gray);
+    border-radius: 0;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.comment-respond input:focus {
+    border: 3px solid var(--peach);
+    outline: none;
+}
+
+.comment-respond textarea {
+    border: 1px solid var(--gray);
+    border-radius: 0;
+    height: 10em;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.comment-respond textarea:focus {
+    border: 3px solid var(--peach);
+    outline: none;
+}
+
+.comment-respond #cookies {
+    display: inline;
+    height: 44px;
+    margin: 0 0.5em 0 0;    
+    width: 44px;    
+}
+
+.comment-respond .cookie-notification {
+    display: flex;
+}
+
+.comment-respond .cookies-label {
+    display: inline;
+}
+
+
+/******************************************************************
+11. SIDEBAR STYLES
+******************************************************************/
+
+aside {	
+	background-color: var(--black);
+	display: flex;
+	flex-flow: column;
+	padding: 1.5em; 
+}
+
+aside > section {
+    padding: 0;
+    margin: 0 0 3em 0;
+    max-width: 25em;
+}
+
+aside ol,
+aside ul {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+aside ul {
+    list-style-type: disc;
+}
+
+aside ul li,
+aside ol li {
+	margin: 0 0 0.5em 0;
+}
+
+aside ul li:last-child,
+aside ol li:last-child {
+    margin: 0;
+}
+
+aside h2 {
+    font-size: 1.5em;		
+    margin: 0 0 0.25em 0;
+    padding: 0 0 0.25em 0;
+}
+
+aside h2:after {
+    background: var(--light-gray);		  		
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 6px 0 0 0;
+    width: 100%;
+}
+
+/* Recent Comments widget styles */
+aside .widget_recent_comments {
+    font-weight: 700;
+}
+
+aside .widget_recent_comments .comment-author-link {
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Tag Cloud widget styles */
+aside .widget_tag_cloud {
+    line-height: 1.5;
+}
+
+aside .widget_tag_cloud	.tag-cloud-link {
+	margin: 0 1em 0 0;
+}
+
+
+/******************************************************************
+12. SEARCH FORM STYLES
+******************************************************************/
+
+.searchform {
+	display: flex;
+	max-width: 100%;
+}
+
+.searchform	input {
+    -webkit-appearance: none;    
+    border-radius: 0;
+    max-width: 100%;
+    padding: 0 0.5em;
+}
+
+.site-header .searchform {
+    align-items: center;    
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    height: 15em;
+    justify-content: center;
+    max-width: 100%;
+    opacity: 0;              
+    position: fixed;		
+    right: 0;
+    top: 0;	
+    transform: translateY(-40em);
+    transition: all 0.5s ease;
+    width: 100%;		
+}
+
+.site-header .searchform.active {
+    opacity: 1;
+    transform: translateY(0);			
+    transition: all 0.5s ease;
+}
+
+.site-header .searchform input {
+    height: 2em;
+    width: 70vw;
+}
+
+.searchform-open .site-header .search-toggle {
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 100%;
+    color: red;
+    display: flex;
+    font-size: 2em;
+    height: 1.5em;
+    justify-content: center;
+    position: fixed;    
+    right: 3vw;
+    top: 3vw;
+    transform: none;
+    width: 1.5em;
+}
+
+/******************************************************************
+13. POST THUMBNAIL STYLES
+******************************************************************/
+
+.post-thumbnail {
+	display: block;	
+}
+
+
+/******************************************************************
+14. FOOTER STYLES
+******************************************************************/
+
+.site-footer {
+    grid-area: footer;
+    padding: 2em 0 1em 0;
+}
+
+.site-footer p {
+    color: var(--light-gray);
+    margin: 0;    
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--light-gray);
+}
+
+
+/******************************************************************
+15. BUTTONS
+******************************************************************/
+
+/* Example button defaults */
+button {
+    background: none;
+    border: none;
+    border-radius: 0;
+    color: var(--black);
+    cursor: pointer;
+    font-family: var(--font_button);
+    letter-spacing: 1px;
+    outline: 0;
+    padding: 0.5em;
+    position: relative;
+    text-decoration: none;
+}
+
+
+/* Navigation toggle button */
+.nav-button {
+    background: var(--white);
+    border: none;
+    border-radius: 0;    
+    cursor: pointer;
+    display: block;
+    height: 4px;
+    margin: 0;    
+    padding: 0;
+    position: relative;
+    text-indent: -9999px;
+    transition: all 0.25s ease-out;
+    width: 30px;  
+}
+
+.nav-button:before {
+    background: var(--white);
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    margin-top: -10px;
+    position: absolute;
+    transition: margin 0.25s ease-out 0.25s, transform 0.25s ease-out, background-color 0.25s ease-out;
+    width: 30px;
+}
+    
+.nav-button:after {
+    background: var(--white);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    margin-bottom: -10px;
+    position: absolute;
+    transition: margin 0.25s ease-out 0.25s, transform 0.25s ease-out, background-color 0.25s ease-out;
+    width: 30px;
+}
+
+.nav-button.close {
+    height: 0;
+}
+  
+.nav-button.close:before {
+    background-color: red;
+    margin-top: 0;
+    opacity: 1;
+    top: 0;
+    transform: rotate(45deg);
+    transform-origin: center;       
+    transition: margin 0.25s ease-out, transform 0.25s ease-out 0.25s, background-color 0.25s ease-out 0.25s;
+}
+  
+.nav-button.close:after {
+    background-color: red;
+    bottom: -4px;
+    margin-bottom: 0;
+    opacity: 1;
+    transform: rotate(-45deg);
+    transform-origin: -center;
+    transition: margin 0.25s ease-out, transform 0.25s ease-out 0.25s, background-color 0.25s ease-out 0.25s;
+}
+  
+
+/* Read More Button */
+.read-more {
+    appearance: button;
+    background-color: var(--white);
+    background-image: none;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    box-shadow: var(--black) 4px 4px 0 0,var(--white) 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: var(--black);
+    cursor: pointer;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.read-more:focus,
+.read-more:hover {
+    text-decoration: none;
+}
+
+.read-more:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.read-more:not([disabled]):active {
+    box-shadow: var(--black) 2px 2px 0 0, var(--white) 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+
+/* Search Toggle Button */
+.search-toggle {
+	background: none;
+    color: var(--white);
+    font-family: var(--font_button);
+    font-size: 2em;
+    font-weight: 700;
+	padding: 0;
+    transform: rotate(-45deg);
+}
+
+.searchsubmit {
+    align-items: center;    
+    display: flex;
+    height: 2em;
+    padding: 0 0.5em;
+}
+
+.search-glass {
+    display: block;
+    font-size: 1.5em;
+    transform: rotate(-45deg);
+}
+
+
+/* Dropdown Menu Toggle Button */
+.dropdown-toggle {
+    border: none;
+    border-radius: 0;
+    bottom: 0.1em;
+    box-sizing: border-box;
+    color: var(--white);
+    cursor: pointer;
+    font-family: var(--font_button);
+    font-weight: 700;
+    line-height: 1; 
+    margin: 0 0 0 1em;
+    outline: 0; 
+    padding: 0;
+    position: relative;
+    text-decoration: none;     
+    transform: scale(1.5);
+}
+
+
+/* Comment Form Submit Button */
+.comment-form .submit {
+    appearance: button;
+    background-color: var(--white);
+    background-image: none;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    box-shadow: var(--black) 4px 4px 0 0,var(--white) 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: var(--black);
+    cursor: pointer;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.comment-form .submit:focus,
+.comment-form .submit:hover {
+    text-decoration: none;
+}
+
+.comment-form .submit:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.comment-form .submit:not([disabled]):active {
+    box-shadow: var(--black) 2px 2px 0 0, var(--white) 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+
+/******************************************************************
+16. Z-INDEXES
+******************************************************************/
+
+.main-nav.active {
+    z-index: 1;
+}
+
+.nav-button {
+    z-index: 2;   
+}
+
+.site-header .searchform {
+    z-index: 3;		
+}
+
+.searchform-open .site-header .search-toggle {
+    z-index: 4;
+}
+
+.search-toggle-wrap {
+    z-index: 4;
+}
+
+
+/******************************************************************
+17. ANIMATIONS
+******************************************************************/
+
+@keyframes openLightbox {
+    0% {
+        transform: scale(0.1);
+		opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+		opacity: 1;
+    }
+}
+
+@-webkit-keyframes openLightbox {
+    0% {
+        transform: scale(0.1);
+		opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+		opacity: 1;
+    }
+}
+
+@keyframes fadeInMenu {
+    0% {
+		opacity: 0;
+    }
+
+    100% {
+		opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes fadeInMenu {
+    0% {
+		opacity: 0;
+    }
+
+    100% {
+		opacity: 1;
+    }
+}
+
+@keyframes animateBg {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@-webkit-keyframes animateBg {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
+/******************************************************************
+18. MEDIA QUERIES
+******************************************************************/
+
+/* 18.1. Styles for 768px and larger screen sizes */
+@media only screen and (min-width: 768px) {
+
+    /******************************************************************
+    18.1.1. TYPOGRAPHY
+    ******************************************************************/
+
+    pre {
+        max-width: 480px;
+    }
+
+
+    /******************************************************************
+    18.1.2. MAIN LAYOUT STYLES
+    ******************************************************************/
+
+    body {
+        align-items: flex-start;        
+        display: grid;
+        grid-template-areas:
+        "header main"
+        "header pagination"
+        "header sidebar"
+        "footer footer";        
+        grid-template-columns: 2fr 6fr;
+    }
+
+
+    /******************************************************************
+    18.1.3. MAIN HEADER STYLES
+    ******************************************************************/
+
+    .site-header {
+        background-color: var(--black);
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        grid-area: header;                
+        margin: 0;
+        min-width: 225px;
+        padding: 24px 0;
+    }
+
+    .site-title {
+        font-size: 2.5em;
+        padding: 0 24px;
+        text-align: left;        
+    }
+
+    .site-description {
+        margin: 1em 0 2em 0;
+        padding: 0 24px;
+        text-align: left;
+    }
+
+    .nav-btn-wrap {
+        display: none;
+    }
+
+    .search-toggle-wrap {
+        display: flex;
+        height: 3em;
+        justify-content: flex-end;        
+        margin: 0;
+        position: fixed;
+        right: 16px;
+        top: 16px;    
+    }    
+
+
+    /******************************************************************
+    18.1.4. NAVIGATION STYLES
+    ******************************************************************/
+
+    .nav-button {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+    }
+
+    .main-nav > ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;        
+    }
+
+    .main-nav ul ul li,
+    .main-nav ul ul ul li {
+        padding: 0;
+    }    
+
+    .main-nav a {
+        font-size: 1.2em;
+    }
+
+    .main-nav li {
+        margin: 0;
+        padding: 0 24px;        
+    }
+
+    .main-nav li:hover {
+        background: var(--gray);
+    }
+
+    .main-nav li:after {
+        display: none;
+    }        
+
+    .main-nav a {
+        font-size: 1.2em;
+    }
+
+    .main-nav ul ul a {
+        font-size: 1.1em;
+    }
+    
+    .main-nav ul ul ul a {
+        font-size: 1em;
+    }
+
+
+    /******************************************************************
+    18.1.5. MAIN CONTENT LAYOUT STYLES
+    ******************************************************************/
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .home #main > article,
+    .archive #main > article,
+    .search #main > article {
+        border-bottom: 1px solid var(--black);
+        width: 50%;
+    }
+
+    .home #main > article:first-child,
+    .archive #main > article:first-child,
+    .search #main > article:first-child {
+        width: 100%;
+    }    
+
+    .home #main .entry-header,
+    .home #main .entry-content,
+    .home #main .entry-footer,
+    .archive #main .entry-header,
+    .archive #main .entry-content,
+    .archive #main .entry-footer,
+    .search #main .entry-header,
+    .search #main .entry-content,
+    .search #main .entry-footer {
+        max-width: 69ch;
+    }
+
+
+    .home #main article .post-thumbnail,
+    .archive #main article .post-thumbnail,
+    .search #main article .post-thumbnail {
+        margin: 0 0 1em 0;
+    }
+
+    .home #main article .entry-meta,
+    .archive #main article .entry-meta,
+    .search #main article .entry-meta {
+        margin: 0 0 1em 0;
+    }
+
+
+    /******************************************************************
+    18.1.6. SINGLE POST STYLES
+    ******************************************************************/
+
+    body.single main {
+        align-self: start;
+        display: flex;
+        flex-flow: column;
+        padding: 2em;
+    }
+
+    body.single main article .entry-header {    
+        margin: 0 0 1em 0;
+        position: relative;
+    } 
+
+    body.single main article .entry-header .entry-title {
+        order: 1;
+    }
+
+    body.single main article .entry-header .entry-meta {
+        order: 0;
+    }
+
+    body.single main article .entry-header,
+    body.single main article .entry-content,
+    body.single main article .entry-footer {
+        max-width: 69ch;
+    }
+
+
+
+    /******************************************************************
+    18.1.7. PAGE STYLES
+    ******************************************************************/
+    
+    body.page main {
+        align-self: start;
+        margin: 0 5vw 2em 5vw;
+        padding: 2em;
+    }
+
+    body.page main article .entry-title:after {    
+        margin: 0.5em 0 0 0;
+    }
+
+    body.page main article .entry-header,
+    body.page main article .entry-content {
+        max-width: 69ch;
+    }
+
+
+    /******************************************************************
+    18.1.8. POSTS PAGINATION STYLES
+    ******************************************************************/
+
+    .pagination {
+        align-self: start;
+        grid-area: pagination;
+    }
+
+    .post-navigation {
+        max-width: 69ch;
+        width: 100%;        
+    }
+
+    .post-navigation .nav-links .nav-next {
+        justify-content: normal;
+        margin: 0 0 0 3em;		
+        width: auto;
+    }  
+
+    /******************************************************************
+    18.1.9. SIDEBAR STYLES
+    ******************************************************************/
+
+
+    aside {
+        align-self: start;
+        display: grid;
+        flex-flow: row;
+        flex-wrap: wrap;
+        grid-area: sidebar;
+        grid-gap: 4em;          
+        grid-template-columns: repeat(auto-fit, minmax(Min(15em, 100%), 1fr));
+        grid-template-rows: masonry;
+        justify-content: center;
+        margin: 0 2em 0 0;
+        padding: 0;                 
+    }
+
+    aside section {
+        align-self: start;
+        margin: 0;
+    }
+
+    aside section > li:first-child {
+        margin-top: 0;
+    }	
+
+
+    /******************************************************************
+    18.1.10. SEARCH FORM STYLES
+    ******************************************************************/
+
+    .site-header .searchform {
+        align-items: center;
+        background: rgba(0,0,0,0.95);
+        display: flex;
+        height: 15em;		
+        justify-content: center;
+        max-width: 100%;
+        opacity: 0;
+        position: fixed;		
+        right: 0;
+        top: 0;	
+        transform: translateY(-40em);
+        transition: all 0.5s ease;
+        width: 100%;
+    }
+    
+    .site-header .searchform.active {
+        opacity: 1;
+        transform: translateY(0);			
+        transition: all 0.5s ease;
+    }
+
+    .site-header .searchform input {
+        height: 2em;
+        width: 20em;
+    }
+
+    .site-header .search-toggle {
+        transition: transform 0.25s ease-out;
+    }
+
+    .site-header .search-toggle:hover {
+        transform: rotate(315deg);
+    }
+    
+    .searchform-open .site-header .search-toggle {
+        align-items: center;
+        background-color: transparent;
+        border: 2px solid red;
+        border-radius: 100%;
+        color: red;
+        display: flex;
+        font-size: 2em;
+        height: 1.5em;
+        justify-content: center;
+        position: fixed;
+        right: 3vw;
+        top: 3vw;
+        transform: none;
+        width: 1.5em;
+    }
+
+
+    /******************************************************************
+    18.1.11. COMMENTS STYLES
+    ******************************************************************/
+
+    .comment-respond {
+        max-width: 69ch;
+    }    
+
+}
+/* End of 768px Media Query */
+
+
+/* 18.2. Styles for 1024px and larger screen sizes */
+@media only screen and (min-width: 1024px) {
+
+    /******************************************************************
+    18.2.1. TYPOGRAPHY
+    ******************************************************************/
+
+    pre {
+        max-width: 69ch;
+    }
+
+
+    /******************************************************************
+    18.2.2. SINGLE POST STYLES
+    ******************************************************************/
+
+    body.single main {
+        margin: 0 0 2em 0;
+        padding: 4em;
+    }
+
+
+    /******************************************************************
+    18.2.3. PAGE STYLES
+    ******************************************************************/
+    
+    body.page main {
+        margin: 0 0 2em 0;
+        padding: 4em;
+    }
+
+}
+/* End of 1024px Media Query */
